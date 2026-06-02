@@ -7,3 +7,5 @@ Paginas = // modelo no canva
 3. Pagina de instrição
 
  bootstraps
+
+ - link do canva (modelo a ser seguido) : https://canva.link/2xbnv7pe9q9ta1m
