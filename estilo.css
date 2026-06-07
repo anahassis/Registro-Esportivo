@@ -1,0 +1,166 @@
+/* 
+CSS NÃO definitivo, usei apenas na primeira versão da página principal,
+enquanto ninguém tinha adicionado nenhum arquivo para me basear
+*/
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background-color:#f0f0f0;
+}
+
+/* TOPO */
+
+.topo{
+    height:60px;
+    background-color:white;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 20px;
+
+    border-bottom:2px solid #1976d2;
+}
+
+.titulo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.trocar_login button{
+    padding:10px 15px;
+    cursor:pointer;
+}
+
+/* CONTAINER */
+
+.container{
+    display:flex;
+}
+
+/* MENU LATERAL */
+
+.menu-lateral{
+    width:220px;
+    min-height:100vh;
+
+    background-color:#8fb8df;
+
+    padding:15px;
+}
+
+/* PERFIL */
+
+.perfil{
+    background-color:#1976d2;
+
+    height:70px;
+
+    display:flex;
+    align-items:center;
+
+    border-radius:40px;
+
+    padding:0 15px;
+
+    margin-bottom:30px;
+}
+
+.perfil img{
+    width:50px;
+    height:50px;
+
+    border-radius:50%;
+
+    border:2px solid black;
+
+    background-color:white;
+}
+
+.perfil span{
+    margin-left:15px;
+
+    background-color:white;
+
+    padding:10px 20px;
+
+    border-radius:20px;
+
+    color:black;
+}
+
+/* MENU */
+
+.menu-lateral ul{
+    list-style:none;
+    padding:0;
+}
+
+.menu-lateral li{
+    background-color:#333;
+
+    margin-bottom:10px;
+
+    padding:12px;
+}
+
+.menu-lateral a{
+    color:white;
+    text-decoration:none;
+}
+
+/* CONTEÚDO */
+
+.conteudo{
+    flex:1;
+
+    background-color:white;
+}
+
+/* BANNER */
+
+#banner{
+    width:100%;
+    height:250px;
+
+    object-fit:cover;
+}
+
+/* INFORMAÇÕES */
+
+.informacoes{
+    padding:30px;
+}
+
+.informacoes h1{
+    margin:0;
+    font-size:60px;
+    color:#555;
+}
+
+.informacoes p{
+    margin:5px 0;
+}
+
+/* CALENDÁRIO */
+
+.calendario{
+    padding:30px;
+}
+
+table{
+    border-collapse:collapse;
+}
+
+th{
+    background-color:#1976d2;
+    color:white;
+}
+
+th, td{
+    border:1px solid #ccc;
+    padding:10px;
+    text-align:center;
+}
