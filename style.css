@@ -1,7 +1,12 @@
 /* 
-CSS NÃO definitivo, usei apenas na primeira versão da página principal,
-enquanto ninguém tinha adicionado nenhum arquivo para me basear
+CSS definitivo, Incompleto
 */
+ 
+/* 
+Index
+*/
+
+/* TOPO */
 
 body{
     margin:0;
@@ -9,27 +14,25 @@ body{
     background-color:#f0f0f0;
 }
 
-/* TOPO */
-
-.topo{
+header{
     height:60px;
     background-color:white;
 
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    padding:0 20px;
+    padding: 0px 20px;
 
-    border-bottom:2px solid #1976d2;
+    border-bottom: 2px solid #1976d2;
 }
 
-.titulo{
+header p{
     font-size:24px;
     font-weight:bold;
 }
 
-.trocar_login button{
+header button{
     padding:10px 15px;
     cursor:pointer;
 }
@@ -40,8 +43,8 @@ body{
     display:flex;
 }
 
-/* MENU LATERAL */
 
+/* MENU LATERAL */
 .menu-lateral{
     width:220px;
     min-height:100vh;
@@ -52,8 +55,7 @@ body{
 }
 
 /* PERFIL */
-
-.perfil{
+.menu-lateral div{
     background-color:#1976d2;
 
     height:70px;
@@ -61,16 +63,14 @@ body{
     display:flex;
     align-items:center;
 
-    border-radius:40px;
+    border-radius:10px;
 
     padding:0 15px;
 
     margin-bottom:30px;
 }
 
-.perfil img{
-    width:50px;
-    height:50px;
+.menu-lateral div img{
 
     border-radius:50%;
 
@@ -79,7 +79,7 @@ body{
     background-color:white;
 }
 
-.perfil span{
+.menu-lateral div span{
     margin-left:15px;
 
     background-color:white;
@@ -98,69 +98,72 @@ body{
     padding:0;
 }
 
-.menu-lateral li{
+.menu-lateral ul li{
     background-color:#333;
 
     margin-bottom:10px;
+    border-radius: 5px;
 
     padding:12px;
+    
+    
 }
 
-.menu-lateral a{
+.menu-lateral ul li a{
     color:white;
     text-decoration:none;
+    
 }
 
 /* CONTEÚDO */
-
 .conteudo{
     flex:1;
-
     background-color:white;
 }
 
-/* BANNER */
-
 #banner{
-    width:100%;
-    height:250px;
-
-    object-fit:cover;
+    object-fit: cover;
 }
 
-/* INFORMAÇÕES */
-
-.informacoes{
+#informacoes{
+    align-content: center;
+    display: block;
+    margin-top: 30px;
+    margin-left: 50px ;
     padding:30px;
+    text-align: center;
 }
 
-.informacoes h1{
+#informacoes h1{
     margin:0;
     font-size:60px;
     color:#555;
 }
 
-.informacoes p{
+#informacoes p , a{
     margin:5px 0;
+    text-decoration: none;
 }
 
-/* CALENDÁRIO */
-
-.calendario{
+#calendario {
+    margin-left: 50px;
     padding:30px;
 }
 
-table{
-    border-collapse:collapse;
+#calendario table{
+    border-collapse: collapse
 }
 
-th{
-    background-color:#1976d2;
-    color:white;
+#calendario table th{
+    background-color: #1976d2;
+    color: white;
+    border:2px solid #636363;
+    padding:10px;
+    text-align:center;
 }
 
-th, td{
-    border:1px solid #ccc;
+#calendario table td{
+    border:2px solid #636363;
     padding:10px;
     text-align:center;
 }
