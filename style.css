@@ -167,3 +167,27 @@ header button{
     padding:10px;
     text-align:center;
 }
+
+.botoes_checkin{
+    margin: 50px;
+    padding:10px 15px;
+    cursor:pointer;
+}
+
+.subtitulo{
+    margin: 70px;
+    padding:5px 5px;
+    cursor:pointer;
+    color: #8fb8df;
+
+}
+
+.restrito{
+    margin:70px;
+    padding:5px 5px;
+}
+
+.imagem{
+    margin: 150px;
+    
+}
