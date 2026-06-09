@@ -1,0 +1,111 @@
+<html>
+<head>
+    <title>Inscrição - Handball</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            background-color: white;
+            display: flex;
+            width: 90%;
+            max-width: 850px;
+            padding: 30px;
+            border-radius: 16px; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            align-items: center;
+            gap: 30px; 
+        }
+
+        section.conteudo {
+            flex: 1;
+        }
+
+        section.imagem {
+            flex: 1;
+        }
+
+        section.imagem img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 14px; 
+        }
+
+        h1 {
+            color: #0000cd;
+            font-size: 36px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 25px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #0000cd;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            background-color: #aaa;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <section class="conteudo">
+            <h1>Handball</h1>
+            <p> <a href="https://www.ifmg.edu.br/ribeiraodasneves/noticias/selecao-de-projetos-programa-de-esporte-e-lazer-piel-com-fomento-interno" target="_blank" >Termos do Piel(Programa de Esporte e Lazer) </a> </p>
+            
+            <label>
+                <input type="checkbox" id="aceitar"> 
+                Li e aceito os termos
+            </label>
+            
+            <button id="inscrever" disabled>Me Inscrever</button>
+        </section>
+
+        <section class="imagem">
+            <img src="https://bostonglobe-prod.cdn.arcpublishing.com/resizer/v2/JXIJ4ITDZMI6NEAO36PQGHKNJU.jpg?auth=d5fe94ef7c310857a1616972b08cfe25c0d1f4fad7236fa18d8ce7e16cc51dc0&width=1440" alt="handball">
+        </section>
+    </main>
+
+    <script>
+        const checkbox = document.getElementById('aceitar');
+        const botao = document.getElementById('inscrever');
+
+        checkbox.addEventListener('change', function() {
+            botao.disabled = !this.checked;
+        });
+    </script>
+
+</body>
+</html>
