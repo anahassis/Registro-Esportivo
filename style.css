@@ -23,14 +23,32 @@ header {
     align-items: center;
 
     padding: 0px 20px;
+    margin: 10px 0px 10px 0px;
 
     border-bottom: 2px solid #1976d2;
 }
 
-header p {
+header div {
+    display: flex;
+    justify-content: left;
+}
+
+header div button{
+    margin-top: 10px;
+    width: 50px;
+    font-size: 32px;
+    height: 50px;
+    padding: 0px;
+    border: none;
+    background: transparent;
+}
+
+header div p{
     font-size: 24px;
     font-weight: bold;
+    margin-left: 50px;
 }
+
 
 header button {
     padding: 10px 15px;
@@ -105,6 +123,11 @@ header button {
     border-radius: 5px;
 
     padding: 12px;
+    transition: 0.3s;
+}
+
+.menu-lateral ul li:hover {
+    margin-left: 20px;
 }
 
 .menu-lateral ul li a {
@@ -180,12 +203,6 @@ body{
     font-family:Arial;
 }
 
-.topo{
-    background-color:#4a90e2;
-    color:white;
-    padding:20px;
-}
-
 .texto{
     margin-left:50px;
     margin-top:30px;
@@ -199,17 +216,26 @@ button{
     padding:10px;
 }
 
-.botaockein{
+#botaockein{
     background-color: rgb(4, 4, 130);
     color: white;
     margin-left:50px;
     margin-top:30px;
-
-
 }
 
-.imagem{
-    width:500px;
-    margin-left:540px;
-    margin-top:-450px;
+.imagem {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 90px 0px 0px 200px;
 }
+
+.imagem img{
+    padding: 25px;
+    margin-left: 5px ;
+    align-items: center;
+    background-image: url(_459568A5-48E9-4EF9-B45A-775DC9138505_-removebg-preview.png);
+}
+

@@ -7,34 +7,41 @@
 
 <body>
 
-    <div class="topo">
-        <h1>Futsal</h1>
+    <script src="script.js"></script>
+    <header>
+        <div>
+            <button>☰</button>
+            <p>
+                Registro Esportivo
+            </p>    
+        </div>
+
+    </header>
+
+    <div class="container">
+        <div class="texto">
+            <h1>Futsal</h1>
+            <h3>Participantes</h3>
+            <button>Pagina de participantes</button>
+
+            <h3>Treinos</h3>
+            <button>Pagina de treinos</button>
+
+            <h3>Edição dos treinos</h3>
+            <p>Esta página é restrita a docentes.</p>
+            <button>Pagina de edição dos treinos</button>
+
+            <h3>Presença</h3>
+            <button>Pagina de presença nos treinos</button>
+
+        </div>
+
+        <div class="imagem">
+            <img src="https://lnfoficial.com.br/media/2024/04/IMG_2209.jpeg" width="500">
+        </div>
     </div>
 
-    <div class="texto">
-
-        <h3>Participantes</h3>
-        <button>Pagina de participantes</button>
-
-        <h3>Treinos</h3>
-        <button>Pagina de treinos</button>
-
-        <h3>Edição dos treinos</h3>
-        <p>Esta página é restrita a docentes.</p>
-        <button>Pagina de edição dos treinos</button>
-
-        <h3>Presença</h3>
-        <button>Pagina de presença nos treinos</button>
-
-        <br>
-
-        <button class="botaockein" onclick="mostrarMensagem()">CHECK-IN</button>
-
-    </div>
-
-    <img class="imagem"
-        src="https://lnfoficial.com.br/media/2024/04/IMG_2209.jpeg">
-     <script src="script.js"></script>
+    <button id="botaockein" onclick="mostrarMensagem()">CHECK-IN</button>
 
 </body>
 </html>
