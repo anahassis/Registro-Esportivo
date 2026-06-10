@@ -22,8 +22,8 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    padding: 0px 20px;
-    margin: 10px 0px 10px 0px;
+    padding: 10px 20px;
+    margin: 0px;
 
     border-bottom: 2px solid #1976d2;
 }
@@ -70,6 +70,15 @@ header button {
     background-color: #8fb8df;
 
     padding: 15px;
+
+    transition: 1s;
+}
+
+
+.menu-lateral.escondido {
+    width: 0px;
+    padding: 0px;
+    overflow: hidden;
 }
 
 /* PERFIL */
@@ -142,6 +151,7 @@ header button {
     background-color: white;
 }
 
+
 #banner {
     object-fit: cover;
 }
@@ -198,29 +208,33 @@ header button {
     text-align: center;
 }
 
-body{
-    background-color:#f0fcff;
-    font-family:Arial;
-}
-
 .texto{
     margin-left:50px;
     margin-top:30px;
 }
 
-h3{
+.texto button {
+    border: none;
+    background-color: transparent;
+
+    transition: 0.5s;
+}
+
+.texto button:hover {
+    color: #1976d2;
+    margin-left: 20px;
+}
+
+.texto h3{
     color:#4a90e2;
 }
 
-button{
-    padding:10px;
-}
-
-#botaockein{
+.botaockein{
     background-color: rgb(4, 4, 130);
     color: white;
     margin-left:50px;
     margin-top:30px;
+    padding: 10px;
 }
 
 .imagem {
@@ -239,3 +253,6 @@ button{
     background-image: url(_459568A5-48E9-4EF9-B45A-775DC9138505_-removebg-preview.png);
 }
 
+.conteudo-checkin {
+    display: flex;
+}

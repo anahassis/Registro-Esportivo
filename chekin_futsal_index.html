@@ -10,7 +10,7 @@
     <script src="script.js"></script>
     <header>
         <div>
-            <button>☰</button>
+            <button onclick="AparecereSumirMenu()">☰</button>
             <p>
                 Registro Esportivo
             </p>    
@@ -19,29 +19,54 @@
     </header>
 
     <div class="container">
-        <div class="texto">
-            <h1>Futsal</h1>
-            <h3>Participantes</h3>
-            <button>Pagina de participantes</button>
 
-            <h3>Treinos</h3>
-            <button>Pagina de treinos</button>
+        <div class="menu-lateral">
+            <div>
+                <img src="usuario.jpg" alt="Usuário" width="50">
+                <span>Arthur</span>
 
-            <h3>Edição dos treinos</h3>
-            <p>Esta página é restrita a docentes.</p>
-            <button>Pagina de edição dos treinos</button>
+            </div>
 
-            <h3>Presença</h3>
-            <button>Pagina de presença nos treinos</button>
+            <ul>
+                <li><a href="chekin_volei_index.html">Vôlei</a></li>
+                <li><a href="chekin_handebol_index.html">Handebol</a></li>
+                <li><a href="chekin_futsal_index.html">Futsal</a></li>
+                <li><a href="chekin_basquete_index.html">Basquete</a></li>
+                <li><a href="chekin_atletismo_index.html">Atletismo</a></li>
+                <li><a href="index.html">Voltar</a></li>
+            </ul>
 
         </div>
 
-        <div class="imagem">
-            <img src="https://lnfoficial.com.br/media/2024/04/IMG_2209.jpeg" width="500">
+        <div class="conteudo">
+
+            <div class="conteudo-checkin">
+                <div class="texto">
+                    <h1>Futsal</h1>
+                    <h3>Participantes</h3>
+                    <button>Pagina de participantes</button>
+
+                    <h3>Treinos</h3>
+                    <button>Pagina de treinos</button>
+
+                    <h3>Edição dos treinos</h3>
+                    <p>Esta página é restrita a docentes.</p>
+                    <button>Pagina de edição dos treinos</button>
+
+                    <h3>Presença</h3>
+                    <button>Pagina de presença nos treinos</button>
+
+                </div>
+
+                <div class="imagem">
+                    <img src="https://lnfoficial.com.br/media/2024/04/IMG_2209.jpeg" width="500">
+                </div>
+            </div>
+
+            <button class="botaockein" onclick="mostrarMensagem()">CHECK-IN</button>
         </div>
     </div>
 
-    <button id="botaockein" onclick="mostrarMensagem()">CHECK-IN</button>
 
 </body>
 </html>
