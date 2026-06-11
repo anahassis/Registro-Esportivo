@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+}
+
+.banner {
+    width: 100%;
+    height: 80px;
+    background-position: center;
+    background-image: image("banner.jpg");
+    background-size: cover;
+    transition: 0.5s;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.banner:hover {
+    transform: scale(1.1);
+}
+.pesquisa {
+    position: absolute;
+    top: 4%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 45px;
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+.botao {
+    width: 55px;
+    height: 45px;
+    position: absolute;
+    top: 1%;
+    right: 92%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 70px;
+    border: 0;
+}
+
+.botao img {
+    width: 50px;
+    height: 50px;
+}
+
+.fotoif1 {
+    width: 340px;
+    height: 85px;
+    transition: 0.5s;
+}
+.fotoif1:hover {
+    transform: scale(1.1);
+    margin-left: 40px;
+}
+
+.fotoif2 {
+    width: 100%;
+    height: 340px;
+    background-position: center;
+    background-image: url("banner.jpg.png");
+    background-size: cover;
+    transition: 0.5s;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    margin-left: 50px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+h1:hover {
+    color: darkblue;
+    transform: scale(1.2);
+    margin-left: 300px;
+}
+
+p {
+    margin-left: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.5s;
+    font-size: 20px;
+}
+p:hover {
+    color: darkblue;
+    transform: scale(1.2);
+    margin-left: 300px;
+}
+
+.futsal {
+    width:230px;
+    height:230px;
+    margin-left: 120px;
+    background:darkblue;
+    border-radius:40px;
+    position:relative;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.futsal h2{
+    color: white;
+    position:absolute;
+    top:35%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size:40px;
+}
+
+.volei {
+    width:230px;
+    height:230px;
+    margin-left: 120px;
+    background:darkblue;
+    border-radius:40px;
+    position:relative;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.volei h2{
+    color: white;
+    position:absolute;
+    top:35%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size:40px;
+}
+
+.hand {
+    width:230px;
+    height:230px;
+    margin-left: 120px;
+    background:darkblue;
+    border-radius:40px;
+    position:relative;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.hand h2 {
+    color: white;
+    position:absolute;
+    top:35%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size:40px;
+}
+
+.basquete {
+    width:230px;
+    height:230px;
+    margin-left: 120px;
+    background:darkblue;
+    border-radius:40px;
+    position:relative;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.basquete h2 {
+    color: white;
+    position:absolute;
+    top:35%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size:40px;
+}
+
+.atletismo {
+    width:230px;
+    height:230px;
+    margin-left: 120px;
+    background:darkblue;
+    border-radius:40px;
+    position:relative;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.atletismo h2 {
+    color: white;
+    position:absolute;
+    top:35%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size:40px;
+}
+
+.futsal:hover {
+    transform: scale(1.1);
+    content: "Termos Aqui!";
+    position: relative;
+}
+
+.volei:hover {
+    transform: scale(1.1);
+    content: "Termos Aqui!";
+    position: relative;
+}
+
+.basquete:hover {
+    transform: scale(1.1);
+    content: "Termos Aqui!";
+    position: relative;
+}
+
+.hand:hover {
+    transform: scale(1.1);
+    content: "Termos Aqui!";
+    position: relative;
+}
+
+.atletismo:hover {
+    transform: scale(1.1);
+    content: "Termos Aqui!";
+    position: relative;
+}
+h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
