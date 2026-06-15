@@ -1,34 +1,41 @@
 <html>
-<head>
-    <style>
-        
-        h1 {
-            color: blue;
-            font-family: 'Sagoe UI', sans-serif;
-        }
-        img {
-            width: 700px; 
-            height: auto;
-            display: block;
-            margin-top: 15px;
-        }
-    </style>
-</head>
-<body>
+    <head>
+        <link rel="stylesheet" href="../../css/style.css">
+    </head>
+    <body>
+        <header>
+            <div>
+                <button onclick="AparecereSumirMenu()">☰</button>
+                <a href="../index.html"><img src="../../imagens/Registro Esportivo LOGO.png" width="200"></a>
+            </div>
+            <nav>
+                <input type="text" placeholder="Pesquisar..." class="pesquisa">
+                <button onclick="mostrarMensagem()">Trocar Usuário</button>
+            </nav>
+        </header>
 
-    <h1>Futsal</h1>
-    
-    <p>
-        <a href="https://www.ifmg.edu.br/ribeiraodasneves/noticias/selecao-de-projetos-programa-de-esporte-e-lazer-piel-com-fomento-interno" target="_blank">
-            Termos do Piel (Programa de Esporte e Lazer)
-        </a>
-    </p>
-    
-    <input type="checkbox" class="botao-termos">
-    
-    <button class="botao-inscrever">Me Inscrever</button>
+        <div class="conteudo-InscreverTreinos">
+            <div class="texto-InscreverTreinos">
+                <h1>Futsal</h1>
+                
+                <p>
+                    <a href="https://www.ifmg.edu.br/ribeiraodasneves/noticias/selecao-de-projetos-programa-de-esporte-e-lazer-piel-com-fomento-interno" target="_blank">
+                        Termos do Piel (Programa de Esporte e Lazer)
+                    </a>
+                </p>
+                
+                <div>
+                    <input type="checkbox" class="botao-termos">
+                    <p>Eu li e concordo com os Termos</p>
+                </div>    
+                
+                <button class="botao-inscrever">Me Inscrever</button>
+            </div>
+            
+            <div class="imagem-InscreverTreinos">
+                <img src="https://imagens.ebc.com.br/lN6f1XVgkSZJIcsFlvjgRv9yJRk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/51533041395_80746e4aa5_o.jpg?itok=VcnT28-j" alt="Futsal">
+            </div>
+        </div>
 
-    <img src="https://imagens.ebc.com.br/lN6f1XVgkSZJIcsFlvjgRv9yJRk=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/51533041395_80746e4aa5_o.jpg?itok=VcnT28-j" alt="Futsal">
-
-</body>
+    </body>
 </html>

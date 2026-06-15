@@ -11,7 +11,7 @@ Index
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: white;
 }
 
 header {
@@ -26,6 +26,23 @@ header {
     margin: 0px;
 
     border-bottom: 2px solid #1976d2;
+}
+
+header input {
+    width: 350px;
+    height: 45px;
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+header button {
+    height: 45px;
+    font-size: 16px;
+    font-style: inherit ;
+    padding: 0px 20px 0px 20px;
+    cursor: pointer;
+    border: 1px solid #636363;
+    background: transparent;
 }
 
 header div {
@@ -50,10 +67,6 @@ header div a img{
 }
 
 
-header button {
-    padding: 10px 15px;
-    cursor: pointer;
-}
 
 /* CONTAINER */
 
@@ -152,7 +165,8 @@ header button {
 
 .conteudo {
     flex: 1;
-    background-color: white;
+    width: 100%;
+    height: 91%;
 }
 
 #banner {
@@ -248,10 +262,6 @@ header button {
 }
 
 .imagem {
-
-    right: 850px;
-
-    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -261,13 +271,14 @@ header button {
 
 .imagem img{
     padding: 25px;
-    margin-left: 5px ;
+    margin: 0px 250px 0px 2px ;
     align-items: center;
     background-image: url(../imagens/_459568A5-48E9-4EF9-B45A-775DC9138505_-removebg-preview.png);
 }
 
 .conteudo-checkin {
     display: flex;
+    justify-content: space-between;
 }
 
 /* PAGINA LOGIN */
@@ -302,4 +313,146 @@ header button {
     border-radius: 20px;
 
     color: white;
+}
+
+
+/* PAGINA INSCRICAO */
+
+.banner {
+    width: 100%;
+    height: 80px;
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.banner:hover {
+    transform: scale(1.1);
+} 
+
+.botao {
+    width: 55px;
+    height: 45px;
+    position: absolute;
+    top: 1%;
+    right: 92%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 70px;
+    border: 0;
+}
+
+.botao img {
+    width: 50px;
+    height: 50px;
+}
+
+.fotoif1 {
+    width: 340px;
+    height: 85px;
+    transition: 0.5s;
+}
+.fotoif1:hover {
+    transform: scale(1.1);
+    margin-left: 40px;
+}
+
+.fotoif2 {
+    width: 100%;
+    height: 340px;
+    background-position: center;
+    background-image: url("../imagens/banner.jpg.png");
+    background-size: cover;
+    transition: 0.5s;
+    background-repeat: no-repeat;
+}
+
+.texto-inscricao h1 {
+    margin-left: 50px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+.texto-inscricao h1:hover {
+    color: darkblue;
+    transform: scale(1.2);
+    margin-left: 300px;
+}
+
+.texto-inscricao p {
+    margin-left: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.5s;
+    font-size: 20px;
+}
+.texto-inscricao p:hover {
+    color: darkblue;
+    transform: scale(1.2);
+    margin-left: 300px;
+}
+
+.inscrever-botoes{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.inscrever-botoes a {
+    background-color: #0d47a1;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    margin: 40px;
+    padding: 80px;
+    border-radius: 20px;
+    
+    transition: 0.3s;
+}
+
+.inscrever-botoes a:hover {
+    transform: scale(1.1);
+}
+
+
+/* PAGINAS INSCREVER */
+
+.conteudo-InscreverTreinos{
+    display: flex;
+    justify-content: space-between;
+}
+
+.texto-InscreverTreinos{
+    display: block;
+
+    background-color: #0d47a1;
+    color: white;
+    border: 3px solid #8fb8df;
+    border-radius: 30px;
+
+    text-align: center;
+    padding: 10px;
+    margin: 70px;
+}
+.texto-InscreverTreinos a{
+    color: white;
+    font-size: 20px;
+}
+
+.texto-InscreverTreinos div{
+    margin-top: 300px;
+    display: flex;
+}
+
+.imagem-InscreverTreinos{
+    margin: 50px 100px;
+    padding: 50px;
+    background-image: url(../imagens/_459568A5-48E9-4EF9-B45A-775DC9138505_-removebg-preview.png);
+    border-radius: 10px;
+}
+
+.imagem-InscreverTreinos img{
+    width: 800px;
+    height: 470px;
 }

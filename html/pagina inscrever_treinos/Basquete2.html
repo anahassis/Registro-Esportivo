@@ -1,34 +1,41 @@
 <html>
-<head>
-    <style>
-        
-        h1 {
-            color: blue;
-            font-family: 'Sagoe UI', sans-serif;
-        }
-        img {
-            width: 700px; 
-            height: auto;
-            display: block;
-            margin-top: 15px;
-        }
-    </style>
-</head>
-<body>
+    <head>
+        <link rel="stylesheet" href="../../css/style.css">
+    </head>
+    <body>
 
-    <h1>Basquete</h1>
-    
-    <p>
-        <a href="https://www.ifmg.edu.br/ribeiraodasneves/noticias/selecao-de-projetos-programa-de-esporte-e-lazer-piel-com-fomento-interno" target="_blank">
-            Termos do Piel (Programa de Esporte e Lazer)
-        </a>
-    </p>
-    
-    <input type="checkbox" class="botao-termos">
-    
-    <button class="botao-inscrever">Me Inscrever</button>
+        <header>
+            <div>
+                <button onclick="AparecereSumirMenu()">☰</button>
+                <a href="../index.html"><img src="../../imagens/Registro Esportivo LOGO.png" width="200"></a>
+            </div>
+            <nav>
+                <input type="text" placeholder="Pesquisar..." class="pesquisa">
+                <button onclick="mostrarMensagem()">Trocar Usuário</button>
+            </nav>
+        </header>
 
-    <img src="https://media.cbnribeirao.com.br/wp-content/uploads/2026/02/franca-basquete-faz-tres-jogos-no-rio-e-pode-assumir-lideranca-do-nbb-55094956252-905567fec8-o-cbnribeirao.com.br-scaled.jpg" alt="Basquete">
-
-</body>
+        <div class="conteudo-InscreverTreinos">
+            <div class="texto-InscreverTreinos">
+                <h1>Basquete</h1>
+                
+                <p>
+                    <a href="https://www.ifmg.edu.br/ribeiraodasneves/noticias/selecao-de-projetos-programa-de-esporte-e-lazer-piel-com-fomento-interno" target="_blank">
+                        Termos do Piel (Programa de Esporte e Lazer)
+                    </a>
+                </p>
+                
+                <div>
+                    <input type="checkbox" class="botao-termos">
+                    <p>Eu li e concordo com os Termos</p>
+                </div>    
+                
+                <button class="botao-inscrever">Me Inscrever</button>
+            </div>
+            
+            <div class="imagem-InscreverTreinos">
+                <img src="https://media.cbnribeirao.com.br/wp-content/uploads/2026/02/franca-basquete-faz-tres-jogos-no-rio-e-pode-assumir-lideranca-do-nbb-55094956252-905567fec8-o-cbnribeirao.com.br-scaled.jpg" alt="Basquete">
+            </div>
+        </div>
+    </body>
 </html>
