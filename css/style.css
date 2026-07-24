@@ -456,3 +456,176 @@ header div a img{
     width: 800px;
     height: 470px;
 }
+
+.container-todos {
+    margin: 20px
+}
+
+.caminho {
+    color: #636363;
+    font-size: 14px;
+}
+
+.topo-perfil {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.botoes-topo button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    border: 1px solid #1976d2;
+    background-color: white;
+    color: #1976d2;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botoes-topo .botao-azul {
+    background-color: #1976d2;
+    color: white;
+}
+
+.dados-gerais {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.foto-aluno {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 30px;
+    border: 2px solid #636363;
+}
+
+.tabela-dados {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tabela-dados td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.tabela-dados .rotulo {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    width: 180px;
+}
+
+.situacao {
+    color: white;
+    font-size: 14px;
+}
+
+.situacao.matriculado {
+    background-color: #1976d2;
+}
+
+.situacao.matriculado-suap {
+    background-color: green;
+}
+
+.situacao.nao {
+    background-color: red;
+}
+
+.abas {
+    margin-top: 20px;
+}
+
+.aba {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.aba.ativa {
+    background-color: #1976d2;
+    color: white;
+    border-color: #1976d2;
+}
+
+.filtro,
+.contador {
+    color: #636363;
+}
+
+.acoes {
+    margin-bottom: 10px;
+}
+
+.tabela-mensagens {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tabela-mensagens th {
+    background-color: #1976d2;
+    color: white;
+    border: 1px solid #636363;
+    padding: 10px;
+    text-align: left;
+}
+
+.tabela-mensagens td {
+    border: 1px solid #636363;
+    padding: 10px;
+}
+
+.content-check-todos nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-check-todos div img{
+    margin: 50px 100px 0px 200px;
+}
+
+.content-check-todos div p {
+    font-size: 35px;
+    margin: 10px 0px 20px 110px;
+}
+
+.content-participantes-todos {
+    margin: 30px;
+}
+
+.content-participantes-todos nav {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    margin-top: 50px;
+}
+
+.content-participantes-todos nav div {
+    background-color: #cac9c9;
+    height: 50px;
+    width: 320px;
+    padding: 20px;
+    border-radius: 20px 0px;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.content-participantes-todos nav div p {
+    margin: 0px 20px 0px 20px
+}
+.content-participantes-todos nav div img {
+    border-radius: 50px;
+}
+
+.content-participantes-todos nav div button {
+    border-radius: 50px;
+}

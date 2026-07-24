@@ -1,84 +1,96 @@
 <html>
 <head>
     <title>Dados Pessoais</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
 
-    <p class="caminho">Início > Mensagens Recebidas > Arthur Francisco Oliveira e Silva (0114850)</p>
+    <header>
+            <div>
+                <button onclick="AparecereSumirMenu()">☰</button>
+                <a href="../index.html"><img src="../../imagens/Registro Esportivo LOGO.png" width="200"></a>
+            </div>
+            <nav>
+                <input type="text" placeholder="Pesquisar..." class="pesquisa">
+            </nav>
+    </header>
+    
+    <div class="container-todos">
+        <p class="caminho">Início > Mensagens Recebidas > Arthur Francisco Oliveira e Silva (0114850)</p>
+    
+    
+        <div class="topo-perfil">
+            <h1>Arthur Francisco Oliveira e Silva (0114850)</h1>
 
-    <div class="topo-perfil">
-        <h1>Arthur Francisco Oliveira e Silva (0114850)</h1>
+            <div class="botoes-topo">
+                <button onclick="alert('Não implementado')">Editar</button>
+                <button class="botao-azul" onclick="alert('Não implementado')">Solicitar troca de foto estudantil</button>
+                <button onclick="alert('Não implementado')">Documentos</button>
+            </div>
+        </div>
 
-        <div class="botoes-topo">
-            <button onclick="alert('Não implementado')">Editar</button>
-            <button class="botao-azul" onclick="alert('Não implementado')">Solicitar troca de foto estudantil</button>
-            <button onclick="alert('Não implementado')">Documentos</button>
+        <h2>Dados Gerais</h2>
+
+        <div class="dados-gerais">
+
+            <img src="../usuario.jpg" alt="Foto do estudante" class="foto-aluno">
+
+            <table class="tabela-dados">
+                <tr>
+                    <td class="rotulo">Nome</td>
+                    <td>Arthur Francisco Oliveira e Silva</td>
+                    <td class="rotulo">Situação</td>
+                    <td class="situacao matriculado">Matriculado</td>
+                </tr>
+                <tr>
+                    <td class="rotulo">Matrícula</td>
+                    <td>0114850</td>
+                    <td class="rotulo">Ingresso</td>
+                    <td>2025/1</td>
+                </tr>
+                <tr>
+                    <td class="rotulo">CPF</td>
+                    <td>120.259.716-56</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="rotulo">Período Referência</td>
+                    <td>2º</td>
+                    <td class="rotulo">C.R.</td>
+                    <td>85.7</td>
+                </tr>
+                <tr>
+                    <td class="rotulo">Curso</td>
+                    <td colspan="3">RIIINFO - Informática (CAMPUS RIBEIRAO DAS NEVES)</td>
+                </tr>
+                <tr>
+                    <td class="rotulo">Matriz</td>
+                    <td>2623 - Matriz 2026 RIIINFO</td>
+                    <td class="rotulo">Qtd. Períodos</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td class="rotulo">Situação Sistêmica</td>
+                    <td class="situacao matriculado-suap">Matriculado no SUAP</td>
+                    <td class="rotulo">Data da Migração</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td class="rotulo">Impressão Digital</td>
+                    <td class="situacao nao">Não</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="rotulo">Emitiu Diploma</td>
+                    <td class="situacao nao">Não</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
         </div>
     </div>
-
-    <h2>Dados Gerais</h2>
-
-    <div class="dados-gerais">
-
-        <img src="../usuario.jpg" alt="Foto do estudante" class="foto-aluno">
-
-        <table class="tabela-dados">
-            <tr>
-                <td class="rotulo">Nome</td>
-                <td>Arthur Francisco Oliveira e Silva</td>
-                <td class="rotulo">Situação</td>
-                <td class="situacao matriculado">Matriculado</td>
-            </tr>
-            <tr>
-                <td class="rotulo">Matrícula</td>
-                <td>0114850</td>
-                <td class="rotulo">Ingresso</td>
-                <td>2025/1</td>
-            </tr>
-            <tr>
-                <td class="rotulo">CPF</td>
-                <td>120.259.716-56</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td class="rotulo">Período Referência</td>
-                <td>2º</td>
-                <td class="rotulo">C.R.</td>
-                <td>85.7</td>
-            </tr>
-            <tr>
-                <td class="rotulo">Curso</td>
-                <td colspan="3">RIIINFO - Informática (CAMPUS RIBEIRAO DAS NEVES)</td>
-            </tr>
-            <tr>
-                <td class="rotulo">Matriz</td>
-                <td>2623 - Matriz 2026 RIIINFO</td>
-                <td class="rotulo">Qtd. Períodos</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td class="rotulo">Situação Sistêmica</td>
-                <td class="situacao matriculado-suap">Matriculado no SUAP</td>
-                <td class="rotulo">Data da Migração</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td class="rotulo">Impressão Digital</td>
-                <td class="situacao nao">Não</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td class="rotulo">Emitiu Diploma</td>
-                <td class="situacao nao">Não</td>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
-
-    </div>
-
 </body>
 </html>

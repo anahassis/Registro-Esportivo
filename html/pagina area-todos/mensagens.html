@@ -1,96 +1,108 @@
 <html>
 <head>
     <title>Mensagens</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
 
-    <h1>MENSAGENS</h1>
+    <header>
+            <div>
+                <button onclick="AparecereSumirMenu()">☰</button>
+                <a href="../index.html"><img src="../../imagens/Registro Esportivo LOGO.png" width="200"></a>
+            </div>
+            <nav>
+                <input type="text" placeholder="Pesquisar..." class="pesquisa">
+            </nav>
+    </header>
 
-    <div class="abas">
-        <button class="aba ativa">Não Lidas</button>
-        <button class="aba">Listas</button>
-        <button class="aba">Todas</button>
-        <button class="aba">Lixeira</button>
+    <div class="container-todos">
+        <h1>MENSAGENS</h1>
+
+        <div class="abas">
+            <button class="aba ativa">Não Lidas</button>
+            <button class="aba">Listas</button>
+            <button class="aba">Todas</button>
+            <button class="aba">Lixeira</button>
+        </div>
+
+        <p class="filtro">FILTRAR POR DATA: <a href="#">2025</a> <a href="#">2026</a></p>
+
+        <p class="contador">1 2 - Mostrando 182 Mensagens Recebidas | <a href="#">Mostrar tudo</a></p>
+
+        <div class="acoes">
+            <select>
+                <option>Ação</option>
+            </select>
+            <button>Aplicar</button>
+            <span>0 de 100 selecionados</span>
+        </div>
+
+        <table class="tabela-mensagens">
+            <tr>
+                <th><input type="checkbox"></th>
+                <th>Ações</th>
+                <th>Remetente</th>
+                <th>Assunto</th>
+                <th>Data envio ▾</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>🔍</td>
+                <td>Paulo Lutkenhaus (SETOR DE CONTROLE E REGISTRO ACADÊMICO)</td>
+                <td>Início de aulas de Sociologia</td>
+                <td>13/04/2026 16:37</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>🔍</td>
+                <td>Paulo Lutkenhaus (SETOR DE CONTROLE E REGISTRO ACADÊMICO)</td>
+                <td>COMUNICADO IMPORTANTE: liberação da Rua Vera Lúcia de Oliveira Andrade</td>
+                <td>13/04/2026 14:22</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>🔍</td>
+                <td>Lívia Barroso (SECAO DE PLANEJAMENTO DO ENSINO)</td>
+                <td>sistema digestório</td>
+                <td>10/04/2026 09:02</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>🔍</td>
+                <td>Joana Bonomo (SECAO DE PLANEJAMENTO DO ENSINO)</td>
+                <td>Lembrete Prova Mensal - inglês 16/04 (vale 10,0 pontos)</td>
+                <td>09/04/2026 20:37</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>🔍</td>
+                <td>Paulo Lutkenhaus (SETOR DE CONTROLE E REGISTRO ACADÊMICO)</td>
+                <td>COMUNICADO IMPORTANTE: interdição da Rua Vera Lúcia de Oliveira Andrade</td>
+                <td>08/04/2026 15:48</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>🔍</td>
+                <td>Alessandro Schwonke (DIRETORIA DE COMUNICAÇÃO)</td>
+                <td>Eleições Conselho Superior do IFMG: inscrições abertas para candidatura</td>
+                <td>07/04/2026 13:22</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>🔍</td>
+                <td>Alberto Junior (SECAO DE PLANEJAMENTO DO ENSINO)</td>
+                <td>Segunda Chamada Física II</td>
+                <td>07/04/2026 12:49</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>🔍</td>
+                <td>Paulo Lutkenhaus (SETOR DE CONTROLE E REGISTRO ACADÊMICO)</td>
+                <td>Realização de 1º Prova Global 2026</td>
+                <td>06/04/2026 17:03</td>
+            </tr>
+        </table>
     </div>
-
-    <p class="filtro">FILTRAR POR DATA: <a href="#">2025</a> <a href="#">2026</a></p>
-
-    <p class="contador">1 2 - Mostrando 182 Mensagens Recebidas | <a href="#">Mostrar tudo</a></p>
-
-    <div class="acoes">
-        <select>
-            <option>Ação</option>
-        </select>
-        <button>Aplicar</button>
-        <span>0 de 100 selecionados</span>
-    </div>
-
-    <table class="tabela-mensagens">
-        <tr>
-            <th><input type="checkbox"></th>
-            <th>Ações</th>
-            <th>Remetente</th>
-            <th>Assunto</th>
-            <th>Data envio ▾</th>
-        </tr>
-        <tr>
-            <td><input type="checkbox"></td>
-            <td>🔍</td>
-            <td>Paulo Lutkenhaus (SETOR DE CONTROLE E REGISTRO ACADÊMICO)</td>
-            <td>Início de aulas de Sociologia</td>
-            <td>13/04/2026 16:37</td>
-        </tr>
-        <tr>
-            <td><input type="checkbox"></td>
-            <td>🔍</td>
-            <td>Paulo Lutkenhaus (SETOR DE CONTROLE E REGISTRO ACADÊMICO)</td>
-            <td>COMUNICADO IMPORTANTE: liberação da Rua Vera Lúcia de Oliveira Andrade</td>
-            <td>13/04/2026 14:22</td>
-        </tr>
-        <tr>
-            <td><input type="checkbox"></td>
-            <td>🔍</td>
-            <td>Lívia Barroso (SECAO DE PLANEJAMENTO DO ENSINO)</td>
-            <td>sistema digestório</td>
-            <td>10/04/2026 09:02</td>
-        </tr>
-        <tr>
-            <td><input type="checkbox"></td>
-            <td>🔍</td>
-            <td>Joana Bonomo (SECAO DE PLANEJAMENTO DO ENSINO)</td>
-            <td>Lembrete Prova Mensal - inglês 16/04 (vale 10,0 pontos)</td>
-            <td>09/04/2026 20:37</td>
-        </tr>
-        <tr>
-            <td><input type="checkbox"></td>
-            <td>🔍</td>
-            <td>Paulo Lutkenhaus (SETOR DE CONTROLE E REGISTRO ACADÊMICO)</td>
-            <td>COMUNICADO IMPORTANTE: interdição da Rua Vera Lúcia de Oliveira Andrade</td>
-            <td>08/04/2026 15:48</td>
-        </tr>
-        <tr>
-            <td><input type="checkbox"></td>
-            <td>🔍</td>
-            <td>Alessandro Schwonke (DIRETORIA DE COMUNICAÇÃO)</td>
-            <td>Eleições Conselho Superior do IFMG: inscrições abertas para candidatura</td>
-            <td>07/04/2026 13:22</td>
-        </tr>
-        <tr>
-            <td><input type="checkbox"></td>
-            <td>🔍</td>
-            <td>Alberto Junior (SECAO DE PLANEJAMENTO DO ENSINO)</td>
-            <td>Segunda Chamada Física II</td>
-            <td>07/04/2026 12:49</td>
-        </tr>
-        <tr>
-            <td><input type="checkbox"></td>
-            <td>🔍</td>
-            <td>Paulo Lutkenhaus (SETOR DE CONTROLE E REGISTRO ACADÊMICO)</td>
-            <td>Realização de 1º Prova Global 2026</td>
-            <td>06/04/2026 17:03</td>
-        </tr>
-    </table>
 
 </body>
 </html>
