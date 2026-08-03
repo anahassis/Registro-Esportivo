@@ -185,6 +185,12 @@ header div a img{
     text-align: center;
 }
 
+#informacoes a {
+    padding: 20px 30px;
+    background-color: white;
+    border: none;
+}
+
 #informacoes h1 {
     margin: 0;
     font-size: 60px;
@@ -628,4 +634,47 @@ header div a img{
 
 .content-participantes-todos nav div button {
     border-radius: 50px;
+}
+
+#main-organizacao{
+    display: block;
+    
+    margin: 5dvh;
+}
+
+#main-organizacao-div {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 5dvh;
+}
+
+#organizacao-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 2dvh;
+    width: 40%;
+}
+
+#organizacao-botoes button {
+    display: block;
+    width: 60%;
+    padding: 5px 5px;
+    background-color: #f0f0f0; /* Fundo cinza claro */
+    color: #000000;
+    border: none;
+    border-radius: 2px;
+    font-size: 13px;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#organizacao-botoes button:hover {
+    background-color: #d9e2f0;
+    font-weight: bold;
+}
+
+
+#organizacao-botoes button p{
+    font-size: 20px;
 }
