@@ -1,4 +1,3 @@
-
 <html>
 <head>
     <title>Atletismo</title>
@@ -8,10 +7,11 @@
 <body>
 
     <script src="script.js"></script>
+
     <header>
-        <div>
+        <div class="header-marca">
             <button onclick="AparecereSumirMenu()">☰</button>
-            <a href="../principal.html"><img src="../../imagens/Registro Esportivo LOGO.png" width="200"></a>
+            <a href="../principal.html"><img src="../../imagens/Registro Esportivo LOGO.png" width="200" alt="Registro Esportivo"></a>
         </div>
 
         <nav>
@@ -22,50 +22,58 @@
 
     <div class="container">
 
-        <div class="menu-lateral">
-            <div>
+        <aside class="menu-lateral">
+            <div class="perfil">
                 <img src="../../imagens/usuario.jpg" alt="Usuário" width="50">
                 <span>Arthur</span>
-
             </div>
 
-            <ul>
-                <li><a href="chekin_volei_index.html">Vôlei</a></li>
-                <li><a href="chekin_handebol_index.html">Handebol</a></li>
-                <li><a href="chekin_futsal_index.html">Futsal</a></li>
-                <li><a href="chekin_basquete_index.html">Basquete</a></li>
-                <li><a href="chekin_atletismo_index.html">Atletismo</a></li>
-            </ul>
+            <nav>
+                <ul>
+                    <li><a href="chekin_volei_index.html">Vôlei</a></li>
+                    <li><a href="chekin_handebol_index.html">Handebol</a></li>
+                    <li><a href="chekin_futsal_index.html">Futsal</a></li>
+                    <li><a href="chekin_basquete_index.html">Basquete</a></li>
+                    <li><a href="chekin_atletismo_index.html">Atletismo</a></li>
+                </ul>
+            </nav>
+        </aside>
 
-        </div>
-        
-        <div class="conteudo">
-            <div class="conteudo-checkin">
+        <main class="conteudo">
+            <article class="conteudo-checkin">
                 <div class="texto">
                     <h1>Atletismo</h1>
-                    <h3>Participantes</h3>
-                    <a href="../pagina area-todos/participantes.html">Pagina de participantes</a>
 
-                    <h3>Treinos</h3>
-                    <a href="../pagina area-todos/organizacao.html">Pagina de treinos</a>
+                    <section>
+                        <h3>Participantes</h3>
+                        <a href="../pagina area-todos/participantes.html">Pagina de participantes</a>
+                    </section>
 
-                    <h3>Edição dos treinos</h3>
-                    <p>Esta página é restrita a docentes.</p>
-                    <a href="../pagina professor/edicaoTreinos.html">Pagina de edição dos treinos</a>
+                    <section>
+                        <h3>Treinos</h3>
+                        <a href="../pagina area-todos/organizacao.html">Pagina de treinos</a>
+                    </section>
 
-                    <h3>Presença</h3>
-                    <a href="../pagina area-todos/check-in.html">Pagina de presença nos treinos</a>
+                    <section>
+                        <h3>Edição dos treinos</h3>
+                        <p>Esta página é restrita a docentes.</p>
+                        <a href="../pagina professor/edicaoTreinos.html">Pagina de edição dos treinos</a>
+                    </section>
 
+                    <section>
+                        <h3>Presença</h3>
+                        <a href="../pagina area-todos/check-in.html">Pagina de presença nos treinos</a>
+                    </section>
                 </div>
 
-                <div class="imagem">
-                    <img src="https://s1.static.brasilescola.uol.com.br/be/2024/04/salto-com-vara-atletismo.JPG" width="500">
-                </div>
-            </div>
+                <figure class="imagem">
+                    <img src="https://s1.static.brasilescola.uol.com.br/be/2024/04/salto-com-vara-atletismo.JPG" width="500" alt="Atletismo">
+                </figure>
+            </article>
+
             <button class="botaockein" onclick="mostrarMensagem()">CHECK-IN</button>
-        </div>
+        </main>
     </div>
-
 
 </body>
 </html>
