@@ -82,7 +82,6 @@ header div a img{
 #informacoes a {
     padding: 20px 30px;
     background-color: white;
-    border: none;
     text-decoration: none;
 }
 
@@ -90,10 +89,6 @@ header div a img{
     margin: 0;
     font-size: 60px;
     color: #555;
-}
-
-#informacoes p {
-    margin: 5px 0;
 }
 
 #calendario {
