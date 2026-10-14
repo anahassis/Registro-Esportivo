@@ -1,0 +1,53 @@
+.texto{
+    margin-left:50px;
+    padding-right: 20px;
+    margin-top:30px;
+}
+
+.texto a {
+    border: none;    
+    margin-right: 10px;
+    padding: 10px 15px;
+    background-color: #1976d2;
+    border-radius: 5px;
+    border-left: 5px solid #0d47a1;
+    color: white;
+
+    transition: 0.5s;
+}
+
+.texto a:hover {
+    margin-left: 20px;
+}
+
+.texto h3{
+    color:#4a90e2;
+}
+
+.botaockein{
+    background-color: rgb(4, 4, 130);
+    color: white;
+    margin-left:50px;
+    margin-top:30px;
+    padding: 10px;
+}
+
+.imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 90px 0px 0px 200px;
+}
+
+.imagem img{
+    padding: 25px;
+    margin: 0px 250px 0px 2px ;
+    align-items: center;
+    background-image: url(../imagens/_459568A5-48E9-4EF9-B45A-775DC9138505_-removebg-preview.png);
+}
+
+.conteudo-checkin {
+    display: flex;
+    justify-content: space-between;
+}

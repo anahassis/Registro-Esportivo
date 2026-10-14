@@ -15,3 +15,16 @@ Paginas =
  bootstraps
 
  - link do canva (modelo a ser seguido) : https://canva.link/2xbnv7pe9q9ta1m
+
+ Pontos a concluir ->
+1. terminar de organizar as paginas
+    Usar css diferentes para tipos de pagina, ajuda para os ID`s poderem ser iguais, porem direferentes
+    # menos confusao para o css ao implementacoes
+2. Finalizar as utilidades
+    Ja com o fireserver, implementar as utilidades com javascripts
+    # na mesma formatacao que o css, em paginas provavelmente, ou encontrar forma melhor
+3. Ativar o servidor
+    Com as funcionalidades 100pcento ligar o servidor e aplicar o fecth
+    # implementar banco de dados que a assis preparou
+4. Ultimo passo -> Transformar o projeto no nivel portifolio
+    organizar o README

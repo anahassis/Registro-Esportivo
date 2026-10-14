@@ -1,0 +1,154 @@
+/* corpo global */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+header {
+    height: 60px;
+    background-color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 20px;
+    margin: 0px;
+
+    border-bottom: 2px solid #1976d2;
+}
+
+header input {
+    width: 350px;
+    height: 45px;
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+header button {
+    height: 45px;
+    font-size: 16px;
+    font-style: inherit ;
+    padding: 0px 20px 0px 20px;
+    cursor: pointer;
+    border: 1px solid #636363;
+    background: transparent;
+}
+
+header div {
+    display: flex;
+    justify-content: left;
+}
+
+header div button{
+    margin-top: 10px;
+    width: 50px;
+    font-size: 32px;
+    height: 50px;
+    padding: 0px;
+    border: none;
+    background: transparent;
+}
+
+header div a img{
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+
+/* classes publicas */
+
+.container {
+    display: flex;
+}
+
+
+.menu-lateral {
+    width: 220px;
+    min-height: 100vh;
+
+    background-color: #8fb8df;
+    background-image: url(../imagens/TexturaFundoMenu.png);
+    background-size: 60%;
+    
+    padding: 15px;
+
+    transition: 1s;
+}
+
+
+.menu-lateral.escondido {
+    width: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.menu-lateral div {
+    background-color: #1976d2;
+    border-left: 6px solid #125aa3;
+
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 10px;
+
+    padding: 0 15px;
+
+    margin-bottom: 30px;
+}
+
+.menu-lateral div img {
+    border-radius: 50%;
+
+    border: 2px solid black;
+
+    background-color: white;
+}
+
+.menu-lateral div span {
+    margin-left: 15px;
+
+    background-color: white;
+
+    padding: 10px 20px;
+
+    border-radius: 20px;
+
+    color: black;
+}
+
+.menu-lateral ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-lateral ul li {
+    background-color: #333;
+
+    margin-bottom: 10px;
+    border-left: 5px solid #0d47a1;
+    border-radius: 5px;
+
+    padding: 12px;
+    transition: 0.3s;
+}
+
+.menu-lateral ul li:hover {
+    margin-left: 20px;
+}
+
+.menu-lateral ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.conteudo {
+    flex: 1;
+    width: 100%;
+    height: 91%;
+}
