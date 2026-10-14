@@ -61,12 +61,11 @@ header div a img{
 
 /* classes publicas */
 
-.container {
+main {
     display: flex;
 }
 
-
-.menu-lateral {
+aside {
     width: 220px;
     min-height: 100vh;
 
@@ -80,13 +79,13 @@ header div a img{
 }
 
 
-.menu-lateral.escondido {
+aside.escondido {
     width: 0px;
     padding: 0px;
     overflow: hidden;
 }
 
-.menu-lateral div {
+aside div {
     background-color: #1976d2;
     border-left: 6px solid #125aa3;
 
@@ -102,7 +101,7 @@ header div a img{
     margin-bottom: 30px;
 }
 
-.menu-lateral div img {
+aside   div img {
     border-radius: 50%;
 
     border: 2px solid black;
@@ -110,7 +109,7 @@ header div a img{
     background-color: white;
 }
 
-.menu-lateral div span {
+aside div span {
     margin-left: 15px;
 
     background-color: white;
@@ -122,12 +121,12 @@ header div a img{
     color: black;
 }
 
-.menu-lateral ul {
+aside ul {
     list-style: none;
     padding: 0;
 }
 
-.menu-lateral ul li {
+aside ul li {
     background-color: #333;
 
     margin-bottom: 10px;
@@ -138,16 +137,16 @@ header div a img{
     transition: 0.3s;
 }
 
-.menu-lateral ul li:hover {
+aside ul li:hover {
     margin-left: 20px;
 }
 
-.menu-lateral ul li a {
+aside ul li a {
     color: white;
     text-decoration: none;
 }
 
-.conteudo {
+section {
     flex: 1;
     width: 100%;
     height: 91%;
