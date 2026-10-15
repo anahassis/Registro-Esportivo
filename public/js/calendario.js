@@ -9,11 +9,11 @@
 
     const eventos = {
         "2026-10-20": [
-            { hora: "14:00", titulo: "Treino de Vôlei", local: "Quadra 1" },
-            { hora: "16:00", titulo: "Treino de Futsal", local: "Quadra 2" }
+            { hora: "14:00", titulo: "Treino de Vôlei", local: "Ginasio" },
+            { hora: "16:00", titulo: "Treino de Futsal", local: "Ginasio" }
         ],
         "2026-10-22": [
-            { hora: "15:30", titulo: "Treino de Atletismo", local: "Pista" }
+            { hora: "15:30", titulo: "Treino de Atletismo", local: "Ginasio" }
         ]
     };
 
