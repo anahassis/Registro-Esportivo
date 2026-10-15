@@ -3,6 +3,7 @@
     <title>Registro Esportivo</title>
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/principal.css">
+    <link rel="stylesheet" href="../css/calendario.css">
 
     <script src="../js/script.js"></script>
 </head>
@@ -50,45 +51,26 @@
                 </a>
             </div>
 
+            <!-- CALENDÁRIO: o conteúdo dos dias é gerado pelo calendario.js -->
             <div id="calendario">
-                <h2>Março</h2>
+                <div class="cal-topo">
+                    <button type="button" id="mes-anterior" aria-label="Mês anterior">&#8249;</button>
+                    <h2 id="cal-titulo"></h2>
+                    <button type="button" id="mes-proximo" aria-label="Próximo mês">&#8250;</button>
+                </div>
                 <table>
-                    <tr>
-                        <th>Dom</th>
-                        <th>Seg</th>
-                        <th>Ter</th>
-                        <th>Qua</th>
-                        <th>Qui</th>
-                        <th>Sex</th>
-                        <th>Sáb</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>7</td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>9</td>
-                        <td>10</td>
-                        <td>11</td>
-                        <td>12</td>
-                        <td>13</td>
-                        <td>14</td>
-                    </tr>
-                    <tr>
-                        <td>15</td>
-                        <td>16</td>
-                        <td>17</td>
-                        <td>18</td>
-                        <td>19</td>
-                        <td>20</td>
-                        <td>21</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Dom</th>
+                            <th>Seg</th>
+                            <th>Ter</th>
+                            <th>Qua</th>
+                            <th>Qui</th>
+                            <th>Sex</th>
+                            <th>Sáb</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cal-corpo"></tbody>
                 </table>
             </div>
 
@@ -96,7 +78,17 @@
 
     </main>
 
+    <!-- Caixinha com as informações do dia clicado -->
+    <div id="cal-modal" class="modal" hidden>
+        <div class="modal-caixa" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+            <button type="button" id="modal-fechar" class="modal-fechar" aria-label="Fechar">&times;</button>
+            <h3 id="modal-titulo"></h3>
+            <div id="modal-conteudo"></div>
+        </div>
+    </div>
+
     <script src="../scripts/script.js"></script>
+    <script src="../js/calendario.js"></script>
 
 </body>
 </html>
