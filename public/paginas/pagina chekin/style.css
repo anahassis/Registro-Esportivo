@@ -32,22 +32,17 @@
     padding: 10px;
 }
 
-.imagem {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#imagem-atletismo {
+    width: 600px;
+    height: 400px;
 
-    margin: 90px 0px 0px 200px;
+    padding: 30px;
+    margin: 100px 250px 0px 2px ;
+    align-items: center;
+    background-image: url(../../img/fundo.png);
 }
 
-.imagem img{
-    padding: 25px;
-    margin: 0px 250px 0px 2px ;
-    align-items: center;
-    background-image: url(../imagens/_459568A5-48E9-4EF9-B45A-775DC9138505_-removebg-preview.png);
-}
-
-.conteudo-checkin {
+section {
     display: flex;
     justify-content: space-between;
 }

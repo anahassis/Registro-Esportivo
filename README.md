@@ -28,3 +28,20 @@ Paginas =
     # implementar banco de dados que a assis preparou
 4. Ultimo passo -> Transformar o projeto no nivel portifolio
     organizar o README
+
+
+COMMITS -> 
+
+1. css's divididos, formatar as paginas nao formatadas
+
+FUNCIONALIDADES A APLICAR -> 
+# em ordem de prioridades 
+
+1. Login
+2. Inscrever nos treinos
+    # inscrever nos treinos é aparecer para fazer check-in, quando se inscreve a pagina para check-in aparece, pois para a inscricao necessario os termos do PIEL
+    2.1. Ou seja, melhorar o menu lateral
+3. Visualizar treinos inscritos no calendario
+    3.1. Implementar calendario interativo, codigo ja pronto
+4. Fazer check-in
+5. 

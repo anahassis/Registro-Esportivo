@@ -1,7 +1,9 @@
+
 <html>
 <head>
     <title>Futsal</title>
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -11,16 +13,15 @@
     <header>
         <div class="header-marca">
             <button onclick="AparecereSumirMenu()">☰</button>
-            <a href="../principal.html"><img src="../../imagens/Registro Esportivo LOGO.png" width="200" alt="Registro Esportivo"></a>
+            <a href="../principal.html"><img src="../../img/Registro Esportivo LOGO.png" width="200" alt="Registro Esportivo"></a>
         </div>
 
         <nav>
-            <input type="text" placeholder="Pesquisar..." class="pesquisa">
             <button onclick="mostrarMensagem()">Trocar Usuário</button>
         </nav>
     </header>
 
-    <div class="container">
+    <main>
 
         <aside class="menu-lateral">
             <div class="perfil">
@@ -39,41 +40,39 @@
             </nav>
         </aside>
 
-        <main class="conteudo">
-            <article class="conteudo-checkin">
+        <section>
                 <div class="texto">
                     <h1>Futsal</h1>
 
-                    <section>
+                    <div>
                         <h3>Participantes</h3>
                         <a href="../pagina area-todos/participantes.html">Pagina de participantes</a>
-                    </section>
+                    </div>
 
-                    <section>
+                    <div>
                         <h3>Treinos</h3>
                         <a href="../pagina area-todos/organizacao.html">Pagina de treinos</a>
-                    </section>
+                    </div>
 
-                    <section>
+                    <div>
                         <h3>Edição dos treinos</h3>
                         <p>Esta página é restrita a docentes.</p>
                         <a href="../pagina professor/edicaoTreinos.html">Pagina de edição dos treinos</a>
-                    </section>
+                    </div>
 
-                    <section>
+                    <div>
                         <h3>Presença</h3>
                         <a href="../pagina area-todos/check-in.html">Pagina de presença nos treinos</a>
-                    </section>
+                    </div>
+
+                    <button class="botaockein" onclick="mostrarMensagem()">CHECK-IN</button>
                 </div>
 
-                <figure class="imagem">
-                    <img src="https://lnfoficial.com.br/media/2024/04/IMG_2209.jpeg" width="500" alt="Futsal">
-                </figure>
-            </article>
+                <img src="https://lnfoficial.com.br/media/2024/04/IMG_2209.jpeg" width="500" alt="Futsal" id="imagem-atletismo">
 
-            <button class="botaockein" onclick="mostrarMensagem()">CHECK-IN</button>
-        </main>
-    </div>
+            
+        </section>
+    </main>
 
 </body>
 </html>
