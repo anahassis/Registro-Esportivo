@@ -58,7 +58,6 @@ header div a img{
     margin-left: 50px;
 }
  
-/* PAGINA PRINCIPAL */ 
  
 .conteudo {
     flex: 1;
@@ -92,14 +91,12 @@ header div a img{
 }
  
  
-/* ================= CALENDÁRIO ================= */
- 
 #calendario {
     --azul: #1976d2;
     --azul-claro: #e3f0fc;
  
     width: fit-content;
-    margin: 30px 0 30px 100px;   /* o 100px é o afastamento do aside */
+    margin: 30px 0 30px 100px;   
     padding: 24px 28px;
  
     background-color: white;
@@ -107,7 +104,6 @@ header div a img{
     box-shadow: 0 2px 14px rgba(0, 0, 0, 0.15);
 }
  
-/* Topo: seta | mês e ano | seta */
 #calendario .cal-topo {
     display: flex;
     align-items: center;
@@ -142,13 +138,11 @@ header div a img{
     color: var(--azul);
 }
  
-/* Tabela sem bordas */
 #calendario table {
     border-collapse: separate;
     border-spacing: 4px 6px;
 }
  
-/* Dom, Seg, Ter... em azul */
 #calendario th {
     width: 40px;
     padding: 0 0 6px;
@@ -168,7 +162,6 @@ header div a img{
     text-align: center;
 }
  
-/* Botão de cada dia (redondo) */
 #calendario .dia {
     position: relative;
     width: 40px;
@@ -177,14 +170,12 @@ header div a img{
     border: none;
     border-radius: 50%;
     background: transparent;
-    color: #222;               /* sábado e domingo */
+    color: #222;           
     font: inherit;
     font-size: 16px;
     cursor: pointer;
 }
  
-/* Dias úteis (segunda a sexta) em azul:
-   todas as colunas, menos a primeira (Dom) e a última (Sáb) */
 #calendario td:not(:first-child):not(:last-child) .dia {
     color: var(--azul);
 }
@@ -199,7 +190,6 @@ header div a img{
     outline-offset: 2px;
 }
  
-/* Dia de hoje: bolinha azul */
 #calendario td:not(:first-child):not(:last-child) .dia.hoje,
 #calendario .dia.hoje {
     background: var(--azul);
@@ -207,7 +197,6 @@ header div a img{
     font-weight: bold;
 }
  
-/* Bolinha vermelha embaixo do número nos dias com treino */
 #calendario .dia.com-evento::after {
     content: "";
     position: absolute;
@@ -220,13 +209,11 @@ header div a img{
     background: #e53935;
 }
  
-/* No dia de hoje o fundo é azul, então a bolinha fica branca para aparecer */
 #calendario .dia.hoje.com-evento::after {
     background: #fff;
 }
  
- 
-/* ================= CAIXINHA (MODAL) ================= */
+
  
 .modal {
     position: fixed;

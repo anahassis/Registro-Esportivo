@@ -1,5 +1,3 @@
-// calendario.js
-// Calendário dinâmico: troca de mês + caixinha com informações do dia.
 
 (function () {
     const MESES = [
