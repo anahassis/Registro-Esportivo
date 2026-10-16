@@ -1,22 +1,21 @@
 <html>
     <head>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/index.css">
+        
     </head>
     <body>
-
         <header>
-            <div>
-                <button onclick="AparecereSumirMenu()">☰</button>
-                <a href=""><img src="imagens/Registro Esportivo LOGO.png" width="200"></a>
+            <div class="logo">
+                <a href=""><img src="img/Registro Esportivo LOGO.png" width="200"></a>
             </div>
-
+            <h1>LOGIN</h1>
         </header>
 
-        <div class="container-login">
+        <main>
             <div class="menu-login">
                     <div class="login-box">
-                        
-                        <h1>LOGIN</h1>
+                        <p><img src="img/user-icon.png" width="150"></p>
                         <p class="subtitle">Utilize seu login do suap.</p>
 
                         <form>
@@ -31,11 +30,12 @@
                             </div>
 
                             <button type="submit" class="btn-login">Login</button>
-                            <a href="html/principal.html">Pagina de inscrição</a>
                         </form>
 
                     </div>
             </div>
-    </div>
+        </main>
+
+        <script type="module" src="js/login.js"></script>
     </body>
 </html>

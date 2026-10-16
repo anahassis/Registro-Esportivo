@@ -1,1 +1,0 @@
-/*  comunicacao do python com o html  */

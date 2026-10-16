@@ -3,7 +3,7 @@ function mostrarMensagem(){
 }
 
 function AparecereSumirMenu(){
-    const menu = document.querySelector('.menu-lateral');
+    const menu = document.querySelector('aside');
 
     menu.classList.toggle('escondido');
 }

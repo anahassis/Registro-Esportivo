@@ -1,0 +1,93 @@
+<html>
+<head>
+    <title>Registro Esportivo</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/principal.css">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <button onclick="AparecereSumirMenu()">☰</button>
+            <a href=""><img src="../img/Registro Esportivo LOGO.png" width="200"></a>
+        </div>
+        
+        <nav>
+            <button onclick="" id="btnTrocarUsuario" class="btn-sair">Trocar Usuário</button>
+        </nav>
+        
+    </header>
+
+    <main>
+        <aside>
+            <div>
+                <a href="pagina area-todos/dados_gerais.html"><img src="../img/user-icon.png" alt="Usuário" width="50"></a>
+                <span id="nomeUsuario">
+                    Carregando...
+                </span>
+            </div>
+
+            <ul>
+                <li><a href="pagina inscricao/PaginaInscricao.html">Inscrever</a></li>
+                <li><a href="pagina chekin/chekin_volei_index.html">Vôlei</a></li>
+                <li><a href="pagina chekin/chekin_handebol_index.html">Handebol</a></li>
+                <li><a href="pagina chekin/chekin_futsal_index.html">Futsal</a></li>
+                <li><a href="pagina chekin/chekin_basquete_index.html">Basquete</a></li>
+                <li><a href="pagina chekin/chekin_atletismo_index.html">Atletismo</a></li>
+            </ul>
+
+        </aside>
+
+        <section>
+
+            <img id="banner" src="../img/fototeste.jpeg" alt="Banner" width="100%" height="250">
+
+            <div id="informacoes">
+                <a href="pagina area-todos/mensagens.html">
+                    <h1>211</h1>
+                    <p>MENSAGENS</p>
+                </a>
+            </div>
+
+            <div id="calendario">
+                <div class="cal-topo">
+                    <button type="button" id="mes-anterior" aria-label="Mês anterior">&#8249;</button>
+                    <h2 id="cal-titulo"></h2>
+                    <button type="button" id="mes-proximo" aria-label="Próximo mês">&#8250;</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dom</th>
+                            <th>Seg</th>
+                            <th>Ter</th>
+                            <th>Qua</th>
+                            <th>Qui</th>
+                            <th>Sex</th>
+                            <th>Sáb</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cal-corpo"></tbody>
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+
+    <div id="cal-modal" class="modal" hidden>
+        <div class="modal-caixa" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+            <button type="button" id="modal-fechar" class="modal-fechar" aria-label="Fechar">&times;</button>
+            <h3 id="modal-titulo"></h3>
+            <div id="modal-conteudo"></div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/calendario.js"></script>
+    <script src="../js/trocar_usuario.js"></script>
+    <script type="module" src="menu_usuario.js"></script>
+
+</body>
+</html>

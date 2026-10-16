@@ -1,0 +1,48 @@
+.texto{
+    margin-left:50px;
+    padding-right: 20px;
+    margin-top:30px;
+}
+
+.texto a {
+    border: none;    
+    margin-right: 10px;
+    padding: 10px 15px;
+    background-color: #1976d2;
+    border-radius: 5px;
+    border-left: 5px solid #0d47a1;
+    color: white;
+
+    transition: 0.5s;
+}
+
+.texto a:hover {
+    margin-left: 20px;
+}
+
+.texto h3{
+    color:#4a90e2;
+}
+
+.botaockein{
+    background-color: rgb(4, 4, 130);
+    color: white;
+    margin-left:50px;
+    margin-top:30px;
+    padding: 10px;
+}
+
+#imagem-atletismo {
+    width: 600px;
+    height: 400px;
+
+    padding: 30px;
+    margin: 100px 250px 0px 2px ;
+    align-items: center;
+    background-image: url(../../img/fundo.png);
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+}
