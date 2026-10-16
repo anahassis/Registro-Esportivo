@@ -1,1 +1,0 @@
-# estrutura do banco de dados para armazenar informacoes
