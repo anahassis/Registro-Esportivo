@@ -20,13 +20,6 @@ header {
     border-bottom: 2px solid #1976d2;
 }
  
-header input {
-    width: 350px;
-    height: 45px;
-    padding-left: 15px;
-    font-size: 16px;
-}
- 
 header button {
     height: 45px;
     font-size: 16px;

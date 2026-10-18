@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (formulario) {
         formulario.addEventListener("submit", async (e) => {
-            e.preventDefault(); // Impede a página de recarregar sozinha
+            e.preventDefault(); 
 
             const usuarioInput = document.getElementById("usuario").value.trim();
             const senhaInput = document.getElementById("senha").value;
@@ -19,18 +19,15 @@ document.addEventListener("DOMContentLoaded", () => {
             try {
                 console.log("Processando login para a matrícula:", usuarioInput);
 
-                // modulo.js para verificar no Firestore
                 const usuarioExiste = await VerificarUsuario(usuarioInput);
 
                 if (usuarioExiste) {
                     console.log("Login autorizado!");
                     localStorage.setItem("usuarioLogado", usuarioInput);
                     
-                    // Limpa os inputs
                     document.getElementById("usuario").value = "";
                     document.getElementById("senha").value = "";
 
-                    // Redireciona para a página principal
                     window.location.href = "paginas/principal.html";
                 } else {
                     // Limpa os campos se falhar

@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                 console.log("Sessão encerrada. Redirecionando para o login...");
 
-                window.location.href = "../index.html"; 
+                window.location.href = window.location.origin + "/Registro-Esportivo/public/index.html"; 
             } else {
                 console.log("Troca de usuário cancelada.");
             }

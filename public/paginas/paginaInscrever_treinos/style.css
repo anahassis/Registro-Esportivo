@@ -1,0 +1,38 @@
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.texto-InscreverTreinos{
+    display: block;
+
+    background-color: #0d47a1;
+    color: white;
+    border: 3px solid #8fb8df;
+    border-radius: 30px;
+
+    text-align: center;
+    padding: 10px;
+    margin: 70px;
+}
+.texto-InscreverTreinos a{
+    color: white;
+    font-size: 20px;
+}
+
+.texto-InscreverTreinos div{
+    margin-top: 300px;
+    display: flex;
+}
+
+.imagem-InscreverTreinos { 
+    margin: 50px 100px;
+    padding: 50px;
+    background-image: url('../../img/fundo.png'); 
+    border-radius: 10px;
+}
+
+.imagem-InscreverTreinos img{
+    width: 800px;
+    height: 470px;
+}
