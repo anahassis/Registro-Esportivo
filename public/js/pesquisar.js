@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     const li = document.createElement("li");
                     const a = document.createElement("a");
                     
-                    a.href = window.location.origin + "/Registro-Esportivo" + pagina.url;
+                    a.href = window.location.origin + pagina.url;
                     a.textContent = pagina.titulo;
                     
                     li.appendChild(a);
