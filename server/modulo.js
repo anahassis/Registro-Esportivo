@@ -16,7 +16,7 @@ const firebaseConfig = {
 
 // Inicializa o Firebase e o Firestore
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+export const db = getFirestore(app);
 
 /**
  * Função para verificar se o usuário existe no Firestore e salvá-lo/atualizá-lo.
@@ -70,17 +70,41 @@ export async function ObterDadosAluno(matriculaInput) {
         const querySnapshot = await getDocs(q);
 
         if (!querySnapshot.empty) {
-
             const docAluno = querySnapshot.docs[0];
-            const dados = docAluno.id; // caso precise do ID
-            
-            return docAluno.data();
+        
+            return {
+                id_documento: docAluno.id,
+                ...docAluno.data()        
+            };
         } else {
             console.warn("Nenhum aluno encontrado para esta matrícula.");
             return null;
         }
     } catch (erro) {
         console.error("Erro ao buscar dados do aluno:", erro);
+        throw erro;
+    }
+}
+
+export async function ObterInscricoesAluno(id_aluno) {
+    try {
+        const inscricoesRef = collection(db, "Inscricao");
+        const q = query(inscricoesRef, where("matricula_aluno", "==", id_aluno));
+        const querySnapshot = await getDocs(q);
+
+        if (!querySnapshot.empty) {
+            const listaInscricoes = querySnapshot.docs.map(doc => ({
+                id_documento: doc.id, 
+                ...doc.data()       
+            }));
+
+            return listaInscricoes; 
+        } else {
+            console.warn("Nenhuma inscrição encontrada para este ID.");
+            return []; 
+        }
+    } catch (erro) {
+        console.error("Erro ao buscar inscrições do aluno:", erro);
         throw erro;
     }
 }

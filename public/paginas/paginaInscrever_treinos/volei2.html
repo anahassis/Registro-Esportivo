@@ -1,20 +1,22 @@
 <html>
     <head>
-        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/global.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
+
         <header>
             <div>
                 <button onclick="AparecereSumirMenu()">☰</button>
-                <a href="../principal.html"><img src="../../imagens/Registro Esportivo LOGO.png" width="200"></a>
+                <a href="../principal.html"><img src="../../img/Registro Esportivo LOGO.png" width="200"></a>
             </div>
             <nav>
                 <input type="text" placeholder="Pesquisar..." class="pesquisa">
             </nav>
         </header>
 
-        <div class="conteudo-InscreverTreinos">
-            <div class="texto-InscreverTreinos">
+        <main class="conteudo-InscreverTreinos">
+            <form id="formInscricao" class="texto-InscreverTreinos">
                 <h1>Volei</h1>
                 
                 <p>
@@ -24,17 +26,18 @@
                 </p>
                 
                 <div>
-                    <input type="checkbox" class="botao-termos">
+                    <input type="checkbox" class="botao-termos" id="aceiteTermos">
                     <p>Eu li e concordo com os Termos</p>
                 </div>    
                 
-                <button class="botao-inscrever">Me Inscrever</button>
-            </div>
+                <button class="botao-inscrever" type="submit" >Me Inscrever</button>
+            </form>
             
             <div class="imagem-InscreverTreinos">
                 <img src="https://conteudo.imguol.com.br/c/esporte/72/2022/09/06/leal-e-um-dos-destaques-no-ataque-da-selecao-brasileira-de-volei-1662493763877_v2_4x3.jpg" alt="Vôlei">
             </div>
-        </div>
+        </main>
 
+        <script type="module" src="inscrever.js"></script>
     </body>
 </html>

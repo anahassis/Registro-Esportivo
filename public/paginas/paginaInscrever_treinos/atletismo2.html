@@ -16,7 +16,7 @@
         </header>
 
         <main class="conteudo-InscreverTreinos">
-            <div class="texto-InscreverTreinos">
+            <form id="formInscricao" class="texto-InscreverTreinos">
                 <h1>Atletismo</h1>
                 
                 <p>
@@ -26,17 +26,18 @@
                 </p>
                 
                 <div>
-                    <input type="checkbox" class="botao-termos">
+                    <input type="checkbox" class="botao-termos" id="aceiteTermos">
                     <p>Eu li e concordo com os Termos</p>
                 </div>    
                 
-                <button class="botao-inscrever">Me Inscrever</button>
-                
-            </div>
+                <button class="botao-inscrever" type="submit" >Me Inscrever</button>
+            </form>
             
             <div class="imagem-InscreverTreinos">
                 <img src="https://cpb.org.br/wp-content/uploads/2023/07/2b4ba0b9cf9942ef9277df078190ac6a.jpg" alt="Atletismo" id="imagem-InscreverTreinos">
             </div>
         </main>
+
+        <script type="module" src="inscrever.js"></script>
     </body>
 </html>

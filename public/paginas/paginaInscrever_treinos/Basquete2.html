@@ -1,21 +1,22 @@
 <html>
     <head>
-        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/global.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
 
         <header>
             <div>
                 <button onclick="AparecereSumirMenu()">☰</button>
-                <a href="../principal.html"><img src="../../imagens/Registro Esportivo LOGO.png" width="200"></a>
+                <a href="../principal.html"><img src="../../img/Registro Esportivo LOGO.png" width="200"></a>
             </div>
             <nav>
                 <input type="text" placeholder="Pesquisar..." class="pesquisa">
             </nav>
         </header>
 
-        <div class="conteudo-InscreverTreinos">
-            <div class="texto-InscreverTreinos">
+        <main class="conteudo-InscreverTreinos">
+            <form id="formInscricao" class="texto-InscreverTreinos">
                 <h1>Basquete</h1>
                 
                 <p>
@@ -25,16 +26,18 @@
                 </p>
                 
                 <div>
-                    <input type="checkbox" class="botao-termos">
+                    <input type="checkbox" class="botao-termos" id="aceiteTermos">
                     <p>Eu li e concordo com os Termos</p>
                 </div>    
                 
-                <button class="botao-inscrever">Me Inscrever</button>
-            </div>
+                <button class="botao-inscrever" type="submit" >Me Inscrever</button>
+            </form>
             
             <div class="imagem-InscreverTreinos">
                 <img src="https://media.cbnribeirao.com.br/wp-content/uploads/2026/02/franca-basquete-faz-tres-jogos-no-rio-e-pode-assumir-lideranca-do-nbb-55094956252-905567fec8-o-cbnribeirao.com.br-scaled.jpg" alt="Basquete">
             </div>
-        </div>
+        </main>
+
+        <script type="module" src="inscrever.js"></script>
     </body>
 </html>
