@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     if (matriculaLogada && spanNome) {
         try {
-            // 1. Carrega o nome do aluno
             const aluno = await ObterDadosAluno(matriculaLogada);
 
             if (aluno && aluno.nome) {
@@ -22,7 +21,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 const liElement = document.getElementById(`li-modalidade-${idModalidade}`);
 
                 if (liElement) {
-                    liElement.removeAttribute("hidden"); // Revela a opção de check-in
+                    liElement.removeAttribute("hidden"); 
                 }
             });
 
@@ -40,11 +39,14 @@ document.addEventListener("DOMContentLoaded", async () => {
         btnTrocarUsuario.addEventListener("click", (e) => {
             e.preventDefault();
 
+            const basePublica = window.location.pathname.includes('/public/') ? '/public' : ''
+            const href = basePublica + '/index.html'
+
             const desejaSair = confirm("Tem certeza de que deseja trocar de usuário?");
 
             if (desejaSair) {
                 localStorage.removeItem("usuarioLogado");
-                window.location.href = window.location.origin + "/Registro-Esportivo/public/index.html"; 
+                window.location.href = window.location.origin + href; 
             }
         });
     }
