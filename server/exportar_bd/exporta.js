@@ -1,5 +1,5 @@
 // Importa a sua configuração do Firebase do seu modulo.js existente
-import { db } from "../server/modulo.js"; 
+import { db } from "../modulo.js"; 
 import { collection, getDocs } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 
                 // Como o Firestore no cliente não tem um comando nativo para listar todas as coleções,
                 // definimos aqui a lista exata das coleções (tabelas) que você tem no seu banco:
-                const nomesColecoes = ["Aluno", "Inscricao"]; 
+                const nomesColecoes = ["Aluno", "Inscricao", "Professor", "Treino", "Check-in", "Modalidade", "Notificacao", "Turma"]; 
                 const bancoDeDadosCompleto = {};
 
                 for (const nomeColecao of nomesColecoes) {

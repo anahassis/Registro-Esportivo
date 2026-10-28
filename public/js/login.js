@@ -1,4 +1,3 @@
-// js/login.js
 import { VerificarUsuario } from "../../server/modulo.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -17,20 +16,24 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             try {
-                console.log("Processando login para a matrícula:", usuarioInput);
+                console.log("Processando login para:", usuarioInput);
 
-                const usuarioExiste = await VerificarUsuario(usuarioInput);
+                const resultadoLogin = await VerificarUsuario(usuarioInput);
 
-                if (usuarioExiste) {
-                    console.log("Login autorizado!");
-                    localStorage.setItem("usuarioLogado", usuarioInput);
+                if (resultadoLogin) {
+                    console.log("Login autorizado! Nível de acesso:", resultadoLogin.nivel);
+                    
+                    // (matrícula para aluno, e-mail completo para professor)
+                    localStorage.setItem("usuarioLogado", resultadoLogin.identificador);
+                    
+                    // nível de acesso (0 = Aluno, 1 = Professor)
+                    localStorage.setItem("nivelAcesso", resultadoLogin.nivel);
                     
                     document.getElementById("usuario").value = "";
                     document.getElementById("senha").value = "";
 
                     window.location.href = "paginas/principal.html";
                 } else {
-                    // Limpa os campos se falhar
                     document.getElementById("usuario").value = "";
                     document.getElementById("senha").value = "";
                 }

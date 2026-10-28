@@ -24,34 +24,45 @@ export const db = getFirestore(app);
  * @returns {Promise<boolean>} - Retorna true se deu tudo certo
  */
 
-export async function VerificarUsuario(matriculaInput) {
+export async function VerificarUsuario(usuarioInput) {
     try {
-        // Cria uma referência para a coleção "Aluno"
+        // 1. Tenta buscar na coleção "Aluno" pela matrícula
         const alunosRef = collection(db, "Aluno");
+        const qAluno = query(alunosRef, where("matricula", "==", usuarioInput));
+        const querySnapshotAluno = await getDocs(qAluno);
 
-        // Cria a consulta buscando onde o campo "matricula" é igual ao input do usuário
-        const q = query(alunosRef, where("matricula", "==", matriculaInput));
-
-        // Executa a busca no banco
-        const querySnapshot = await getDocs(q);
-
-        // Se a consulta retornar algum documento, significa que a matrícula existe!
-        if (!querySnapshot.empty) {
-            console.log("Matrícula encontrada!");
-
-            // Pegamos o ID exato do documento retornado (ex: "1")
-            const docAluno = querySnapshot.docs[0];
+        if (!querySnapshotAluno.empty) {
+            console.log("Matrícula de aluno encontrada!");
+            const docAluno = querySnapshotAluno.docs[0];
             const alunoRef = doc(db, "Aluno", docAluno.id);
             
             await updateDoc(alunoRef, {
                 ultimo_acesso: new Date()
             });
 
-            return true;
-        } else {
-            alert("Matrícula não encontrada. Por favor, verifique os dados.");
-            return false;
+            // Retorna o nível 0 para aluno e a matrícula como identificador
+            return { nivel: 0, identificador: usuarioInput };
         }
+
+        // 2. Se não for aluno, tenta buscar na coleção "Professor" pelo e-mail
+        // Se o usuário digitou apenas "camila.silva", completamos com "@ifmg.edu.br"
+        const emailBusca = usuarioInput.includes("@") ? usuarioInput : usuarioInput + "@ifmg.edu.br";
+        
+        const professoresRef = collection(db, "Professor");
+        const qProf = query(professoresRef, where("email", "==", emailBusca));
+        const querySnapshotProf = await getDocs(qProf);
+
+        if (!querySnapshotProf.empty) {
+            console.log("E-mail de professor encontrado!");
+            const docProf = querySnapshotProf.docs[0];
+            const dadosProf = docProf.data();
+
+            // Retorna o nível 1 para professor e o e-mail completo como identificador
+            return { nivel: 1, identificador: dadosProf.email };
+        }
+
+        alert("Usuário não encontrado. Por favor, verifique os dados.");
+        return null;
 
     } catch (erro) {
         console.error("Erro no módulo de banco de dados:", erro);
@@ -105,6 +116,30 @@ export async function ObterInscricoesAluno(id_aluno) {
         }
     } catch (erro) {
         console.error("Erro ao buscar inscrições do aluno:", erro);
+        throw erro;
+    }
+}
+
+export async function Select(Tabela, campoFiltro, valorFiltro) {
+    try {
+        const tabelaRef = collection(db, Tabela);
+        // Agora usamos a função 'where' do Firebase corretamente, recebendo o campo e o valor
+        const q = query(tabelaRef, where(campoFiltro, "==", valorFiltro));
+        const querySnapshot = await getDocs(q);
+
+        if (!querySnapshot.empty) {
+            const listaResultados = querySnapshot.docs.map(doc => ({
+                id_documento: doc.id, 
+                ...doc.data()       
+            }));
+
+            return listaResultados; 
+        } else {
+            console.warn("Nenhum registo encontrado na tabela:", Tabela);
+            return []; 
+        }
+    } catch (erro) {
+        console.error("Erro ao buscar tabela:", erro);
         throw erro;
     }
 }
