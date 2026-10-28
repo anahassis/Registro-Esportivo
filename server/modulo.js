@@ -2,7 +2,7 @@
 
 // Importações dos SDKs do Firebase necessários
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-import { getFirestore, collection, query, where, getDocs, updateDoc, doc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+import { addDoc, getFirestore, collection, query, where, getDocs, updateDoc, doc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
 // Configurações do seu projeto no Firebase
 const firebaseConfig = {
@@ -140,6 +140,47 @@ export async function Select(Tabela, campoFiltro, valorFiltro) {
         }
     } catch (erro) {
         console.error("Erro ao buscar tabela:", erro);
+        throw erro;
+    }
+}
+
+/**
+ * Função genérica para inserir novos registos em qualquer tabela/coleção.
+ * @param {string} Tabela - Nome da coleção (ex: "Mensagem", "Notificacao")
+ * @param {Object} dados - Objeto contendo os dados a serem salvos
+ * @returns {Promise<Object>} - Retorna o documento criado com o ID gerado
+ */
+export async function InserirDado(Tabela, dados) {
+    try {
+        const tabelaRef = collection(db, Tabela);
+        const novoDocRef = await addDoc(tabelaRef, dados);
+        return { id_documento: novoDocRef.id, ...dados };
+    } catch (erro) {
+        console.error(`Erro ao inserir dados na tabela ${Tabela}:`, erro);
+        throw erro;
+    }
+}
+
+/**
+ * Função para listar todos os documentos de uma tabela sem filtros.
+ * @param {string} Tabela - Nome da coleção
+ * @returns {Promise<Array>} - Lista com todos os registos
+ */
+export async function ObterTodos(Tabela) {
+    try {
+        const tabelaRef = collection(db, Tabela);
+        const querySnapshot = await getDocs(tabelaRef);
+
+        if (!querySnapshot.empty) {
+            return querySnapshot.docs.map(doc => ({
+                id_documento: doc.id,
+                ...doc.data()
+            }));
+        } else {
+            return [];
+        }
+    } catch (erro) {
+        console.error(`Erro ao buscar todos os registos da tabela ${Tabela}:`, erro);
         throw erro;
     }
 }

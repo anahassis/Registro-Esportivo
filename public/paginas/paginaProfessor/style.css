@@ -1,92 +1,115 @@
-main {
-    margin: 25px;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
 }
 
+/* Ajustes gerais do conteúdo principal */
+section {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+section h2 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+section p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* ==========================================
+   TABELA DE GESTÃO DO PROFESSOR
+   ========================================== */
 #tableareaprofessor {
   width: 100%;
   border-collapse: collapse;
   font-family: Arial, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   background: #ffffff;
+  margin-top: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-/* Cabeçalho */
 #tableareaprofessor th {
   background: #f2f2f2;
-  padding: 8px;
+  padding: 12px 10px;
   border: 1px solid #e0e0e0;
   text-align: left;
   font-weight: bold;
+  color: #333;
 }
 
 #tableareaprofessor td {
-  padding: 8px;
+  padding: 12px 10px;
   border: 1px solid #e0e0e0;
   vertical-align: middle;
+  color: #444;
 }
 
-#tableareaprofessor td img {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  vertical-align: middle;
-  margin-right: 8px;
+#tableareaprofessor tr:hover {
+  background-color: #f9f9f9;
 }
 
-#tableareaprofessor td input {
-  width: 45px;
-  height: 30px;
-  text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-body {
-  font-family: Arial, sans-serif;
-}
-
-#passos, #formatoenvio, #enviarcopias, #destinatarios {
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
+.secao-formulario {
   background: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  margin-top: 10px;
 }
 
-#passos {
-  background: #dbeafe;
-  padding: 10px;
+.secao-formulario h3 {
+  margin-top: 0;
+  color: #222;
+  font-size: 18px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
 }
 
-.header-professor {
-  background: #ececec;
-  padding: 8px 10px;
-  border-bottom: 1px solid #ccc;
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
-.header-professor h3 {
-  margin: 0;
-  font-size: 14px;
+.modal[hidden] {
+    display: none !important;
 }
 
-#formatoenvio main, #enviarcopias main {
-  padding: 10px;
+.modal-caixa {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    width: 450px;
+    max-width: 90%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
 }
 
-#table-destinatarios {
-  width: 100%;
-  border-collapse: collapse;
+.modal-fechar {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.2s;
 }
 
-#table-destinatarios th, 
-#table-destinatarios td {
-  border: 1px solid #ccc;
-  padding: 8px;
-  text-align: left;
+.modal-fechar:hover {
+    color: #000;
 }
 
-#table-destinatarios tr:first-child {
-  background: #ececec;
-}
-
-#table-destinatarios a {
-  color: #0f766e;
-  font-weight: bold;
-}

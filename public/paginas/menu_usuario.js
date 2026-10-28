@@ -18,9 +18,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                     dadosUsuario = resultadoProf[0];
                 }
 
-                // Exemplo visual: Altera a cor dos elementos com id="mudar_cor" para professores (ex: Tom de destaque/admin)
+                // Altera a cor dos elementos com id="mudar_cor" para professores
                 elementosMudarCor.forEach(el => {
-                    el.style.backgroundColor = "#257261"; // Cor para professor
+                    el.style.backgroundColor = "#569fe7"; 
                     el.style.color = "#0e0d0d";
                 });
 
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                 // Altera a cor dos elementos com id="mudar_cor" para alunos
                 elementosMudarCor.forEach(el => {
-                    el.style.backgroundColor = "#569fe7"; // Cor para aluno
+                    el.style.backgroundColor = "#79ade2"; 
                     el.style.color = "#ffffff";
                 });
             }
@@ -45,8 +45,11 @@ document.addEventListener("DOMContentLoaded", async () => {
                 spanNome.textContent = usuarioLogado;
             }
 
-            // Se for aluno (nível 0), carrega e exibe as inscrições nas modalidades correspondentes
+            // Se for aluno (nível 0), carrega e exibe as inscrições
             if (nivelAcesso !== "1") {
+                const elInscrever = document.getElementById('Inscrever');
+                if (elInscrever) elInscrever.removeAttribute("hidden");
+
                 const listaInscricoes = await Select("Inscricao", "matricula_aluno", usuarioLogado);
 
                 listaInscricoes.forEach((inscricao) => {
@@ -58,9 +61,14 @@ document.addEventListener("DOMContentLoaded", async () => {
                     }
                 });
             } else {
-                // Se for professor, pode optar por revelar todos os menus de check-in ou gereniamento
-                const todosLinksCheckin = document.querySelectorAll("[id^='li-modalidade-']");
-                todosLinksCheckin.forEach(el => el.removeAttribute("hidden"));
+                // Se for professor, exibe os links exclusivos de professor (caso existam na página atual)
+                const elProf1 = document.getElementById('prof-1');
+                const elProf2 = document.getElementById('prof-2');
+                const elProf3 = document.getElementById('prof-3');
+                
+                if (elProf1) elProf1.removeAttribute("hidden");
+                if (elProf2) elProf2.removeAttribute("hidden");
+                if (elProf3) elProf3.removeAttribute("hidden");
             }
 
         } catch (erro) {

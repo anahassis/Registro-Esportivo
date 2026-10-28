@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Treinos - Professor</title>
+    
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <button onclick="AparecereSumirMenu()">☰</button>
+            <a href="../principal.html"><img src="../../img/Registro Esportivo LOGO.png" width="200" alt="Logo"></a>
+        </div>
+        
+        <nav>
+            <input type="text" id="inputBuscaPaginas" placeholder="Pesquisar páginas...">
+            <ul id="listaResultados" class="lista-resultados-pesquisa" style="display: none;"></ul>
+            <button id="btnTrocarUsuario" class="btn-sair">Trocar Usuário</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Menu lateral com id="mudar_cor" integrado -->
+        <aside id="mudar_cor">
+            <div>
+                <a href="pagina area-todos/dados_gerais.html"><img src="../../img/user-icon.png" alt="Usuário" width="50"></a>
+                <span id="nomeUsuario">Carregando...</span>
+            </div>
+
+            <ul>
+                <li><a href="treino.html">Gerenciar Treinos</a></li>
+                <li><a href="presenca.html">Presenças nos Treinos</a></li>
+            </ul>
+        </aside>
+
+        <!-- Área principal de conteúdo para o professor -->
+        <section style="padding: 20px;">
+            <h2>Painel de Gestão de Treinos</h2>
+            <p>Utilize as opções abaixo para criar novos treinos ou gerenciar os existentes.</p>
+
+            <!-- Guias / Abas de Navegação para Formulários -->
+            <div style="display: flex; gap: 10px; margin-bottom: 20px; margin-top: 20px;">
+                <button type="button" id="btnGuiaCriar" style="padding: 10px 20px; cursor: pointer; background: #1976d2; color: white; border: none; border-radius: 6px;">Novo Treino</button>
+                <button type="button" id="btnGuiaEditar" style="padding: 10px 20px; cursor: pointer; background: #e0e0e0; border: none; border-radius: 6px;">Editar / Listar Treinos</button>
+            </div>
+
+            <!-- Conteúdo da Guia: Criar Treino -->
+            <div id="secaoCriarTreino" class="secao-formulario" style="background: #f9f9f9; padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
+                <h3>Criar Novo Treino</h3>
+                <form id="formCriarTreino">
+                    <div style="margin-bottom: 10px;">
+                        <label for="tituloTreino">Título do Treino:</label><br>
+                        <input type="text" id="tituloTreino" required style="width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box;">
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <label for="modalidadeTreino">Modalidade:</label><br>
+                        <select id="modalidadeTreino" required style="width: 100%; padding: 8px; margin-top: 5px;">
+                            <option value="0">Futsal</option>
+                            <option value="1">Vôlei</option>
+                            <option value="2">Atletismo</option>
+                            <option value="3">Basquete</option>
+                            <option value="4">Handebol</option>
+                        </select>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <label for="dataTreino">Data e Hora:</label><br>
+                        <input type="datetime-local" id="dataTreino" required style="width: 100%; padding: 8px; margin-top: 5px;">
+                    </div>
+                    <button type="submit" style="padding: 10px 15px; background: #27ae60; color: white; border: none; border-radius: 6px; cursor: pointer;">Salvar Treino</button>
+                </form>
+            </div>
+
+            <!-- Conteúdo da Guia: Editar Treinos (inicialmente oculto) -->
+            <div id="secaoEditarTreino" class="secao-formulario" style="background: #f9f9f9; padding: 20px; border: 1px solid #ccc; border-radius: 8px;" hidden>
+                <h3>Editar ou Excluir Treinos</h3>
+                <p>Selecione um treino cadastrado para alterar as informações.</p>
+                <table id="tableareaprofessor">
+                    <thead>
+                        <tr>
+                            <th>Título</th>
+                            <th>Modalidade</th>
+                            <th>Data</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaTreinosTabela">
+                        <!-- Preenchido via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal id="cal-modal" idêntico ao da principal.html para interações rápidas -->
+    <div id="cal-modal" class="modal" hidden>
+        <div class="modal-caixa" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+            <button type="button" id="modal-fechar" class="modal-fechar" aria-label="Fechar">×</button>
+            <h3 id="modal-titulo">Detalhes do Treino</h3>
+            <div id="modal-conteudo"></div>
+        </div>
+    </div>
+
+    <!-- Scripts do sistema -->
+    <script type="module" src="../../js/script.js"></script>
+    <script type="module" src="../menu_usuario.js"></script>
+    <script type="module" src="../../js/pesquisar.js"></script>
+</body>
+</html>

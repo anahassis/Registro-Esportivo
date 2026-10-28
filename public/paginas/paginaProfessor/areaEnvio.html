@@ -1,52 +1,103 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="../../css/style.css">
-    </head>
-    <body>
-        <header>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de Envio de Mensagens - Professor</title>
+    
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
         <div>
             <button onclick="AparecereSumirMenu()">☰</button>
-            <a href=""><img src="../../imagens/Registro Esportivo LOGO.png" width="200"></a>
+            <a href="principal.html"><img src="../../img/Registro Esportivo LOGO.png" width="200" alt="Logo"></a>
         </div>
         
         <nav>
-            <input type="text" placeholder="Pesquisar..." class="pesquisa">
+            <input type="text" id="inputBuscaPaginas" placeholder="Pesquisar páginas...">
+            <ul id="listaResultados" class="lista-resultados-pesquisa" style="display: none;"></ul>
+            <button id="btnTrocarUsuario" class="btn-sair">Trocar Usuário</button>
         </nav>
-        
-        </header>
+    </header>
 
-        <main>
-            <h1>AREA ENVIO</h1>
+    <main>
+        <!-- Menu lateral com id="mudar_cor" integrado -->
+        <aside id="mudar_cor">
+            <div>
+                <a href="pagina area-todos/dados_gerais.html"><img src="../../img/user-icon.png" alt="Usuário" width="50"></a>
+                <span id="nomeUsuario">Carregando...</span>
+            </div>
 
-            <div id="passos">
-                <b> ! Passo 2 de 3</b>
+            <ul>
+                <li><a href="treino.html">Gerenciar Treinos</a></li>
+                <li><a href="envio.html">Área de Envio</a></li>
+            </ul>
+        </aside>
+
+        <!-- Área principal de envio -->
+        <section style="padding: 20px;">
+            <h2>Área de Envio de Mensagens por Treino</h2>
+            <p>Selecione um treino para carregar os alunos inscritos e enviar comunicados em massa.</p>
+
+            <!-- Seleção de Treino -->
+            <div class="secao-formulario" style="margin-bottom: 20px;">
+                <h3>1. Selecionar Treino / Modalidade</h3>
+                <div style="margin-top: 10px;">
+                    <label for="selectTreinoEnvio">Escolha o Treino:</label><br>
+                    <select id="selectTreinoEnvio" style="width: 100%; padding: 8px; margin-top: 5px;">
+                        <option value="">Selecione um treino cadastrado...</option>
+                    </select>
+                </div>
             </div>
-            <div id="formatoenvio">
-                <header class="header-professor"><h3>Forma Envio</h3></header>
-                <main>
-                    <p>Via Suap: <input type="checkbox"></p>
-                    <p>Via Email: <input type="checkbox"></p>
-                </main>
+
+            <!-- Formulário da Mensagem -->
+            <div class="secao-formulario" style="margin-bottom: 20px;">
+                <h3>2. Conteúdo da Mensagem</h3>
+                <form id="formEnvioMensagem">
+                    <div style="margin-bottom: 10px;">
+                        <label for="tituloMensagem">Título:</label><br>
+                        <input type="text" id="tituloMensagem" required style="width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box;" placeholder="Ex: Alteração de horário no treino">
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <label for="conteudoMensagem">Mensagem:</label><br>
+                        <textarea id="conteudoMensagem" rows="4" required style="width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box;" placeholder="Escreva aqui o conteúdo da mensagem unificada..."></textarea>
+                    </div>
+                    <button type="submit" style="padding: 10px 20px; background: #27ae60; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">
+                        Enviar para Todos os Inscritos
+                    </button>
+                </form>
             </div>
-            <div id="enviarcopias">
-                <header class="header-professor"><h3>Enviar Cópias</h3></header>
-                <main>
-                    <p>Copiar Coordenador: <input type="checkbox"></p>
-                    <p>Copiar Diretor Academico: <input type="checkbox"></p>
-                    <p>Copiar Responsavel pelo Aluno: <input type="checkbox"></p>
-                </main>
-            </div>
-            <div id="destinatarios">
-                <table id="table-destinatarios">
-                    <tr>
-                        <th><input type="checkbox"></th> <th>Matrícula</th> <th>Nome</th><th>Situacão</th><th>Curso</th><th>MAtriz</th><th>Turno</th>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox"></td><th><a href="#">0114850</a></th><th></th>
-                    </tr>
+
+            <!-- Tabela de Destinatários -->
+            <div class="secao-formulario">
+                <h3>3. Destinatários (Alunos Inscritos)</h3>
+                <table id="tableareaprofessor">
+                    <thead>
+                        <tr>
+                            <th style="width: 40px;"><input type="checkbox" id="selectAll" checked></th>
+                            <th>Matrícula</th>
+                            <th>Nome do Aluno</th>
+                            <th>Curso / Turma</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabelaDestinatarios">
+                        <tr>
+                            <td colspan="4" style="text-align: center;">Nenhum treino selecionado.</td>
+                        </tr>
+                    </tbody>
                 </table>
-
             </div>
-        </main>
-    </body>
+        </section>
+    </main>
+
+    <!-- Scripts do sistema -->
+    <script type="module" src="../../js/script.js"></script>
+    <script type="module" src="../menu_usuario.js"></script>
+    <script type="module" src="../../js/pesquisar.js"></script>
+    <script type="module" src="envio.js"></script>
+</body>
 </html>

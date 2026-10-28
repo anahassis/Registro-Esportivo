@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 
                 // Como o Firestore no cliente não tem um comando nativo para listar todas as coleções,
                 // definimos aqui a lista exata das coleções (tabelas) que você tem no seu banco:
-                const nomesColecoes = ["Aluno", "Inscricao", "Professor", "Treino", "Check-in", "Modalidade", "Notificacao", "Turma"]; 
+                const nomesColecoes = ["Aluno", "Inscricao", "Professor", "Treino", "Check-in", "Modalidade", "Notificacao", "Turma", "Mensagem"]; 
                 const bancoDeDadosCompleto = {};
 
                 for (const nomeColecao of nomesColecoes) {

@@ -1,31 +1,95 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="../../css/style.css">
-    </head>
-    <body>
-        <header>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Presenças e Inscrições</title>
+    
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/principal.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
         <div>
             <button onclick="AparecereSumirMenu()">☰</button>
-            <a href=""><img src="../imagens/Registro Esportivo LOGO.png" width="200"></a>
+            <a href="../principal.html"><img src="../../img/Registro Esportivo LOGO.png" width="200" alt="Logo"></a>
         </div>
         
         <nav>
-            <input type="text" placeholder="Pesquisar..." class="pesquisa">
+            <input type="text" id="inputBuscaPaginas" placeholder="Pesquisar páginas...">
+            <ul id="listaResultados" class="lista-resultados-pesquisa" style="display: none;"></ul>
+            <button id="btnTrocarUsuario" class="btn-sair">Trocar Usuário</button>
         </nav>
-        
-        </header>
+    </header>
 
-        <main>
-            <h1>PRESEÇA NOS TREINOS</h1>
-            
-            <table id="tableareaprofessor">
-                <tr>
-                    <th>Aluno</th> <th>%Data%</th>
-                </tr>
-                <tr>
-                    <td><img src="../../imagens/usuario.png" width="150"></td> <td><input type="number" value="0" min="0" max="2"></td>
-                </tr>
-            </table>
-        </main>
-    </body>
+    <main>
+        <!-- Menu lateral com id="mudar_cor" para adaptação do professor -->
+        <aside id="mudar_cor">
+            <div>
+                <a href="pagina area-todos/dados_gerais.html"><img src="../../img/user-icon.png" alt="Usuário" width="50"></a>
+                <span id="nomeUsuario">Carregando...</span>
+            </div>
+
+            <ul>
+                <li><a href="treino.html">Gerenciar Treinos</a></li>
+                <li><a href="gerenciar_presencas.html">Lista e Presenças</a></li>
+            </ul>
+        </aside>
+
+        <!-- Área principal de listagem -->
+        <section style="padding: 20px;">
+            <h2>Controle de Inscrições e Presenças</h2>
+            <p>Selecione um treino abaixo para ver os alunos inscritos e atualizar os check-ins.</p>
+
+            <!-- Tabela de Treinos Cadastrados -->
+            <div style="background: #f9f9f9; padding: 20px; border: 1px solid #ddd; border-radius: 8px; margin-top: 20px;">
+                <h3>Treinos Disponíveis</h3>
+                <table id="tableareaprofessor">
+                    <thead>
+                        <tr>
+                            <th>Título do Treino</th>
+                            <th>Modalidade</th>
+                            <th>Data</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabelaTreinosLista">
+                        <!-- Os dados serão injetados dinamicamente via JS -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para exibir inscrições e presenças dos alunos -->
+    <div id="cal-modal" class="modal" hidden>
+        <div class="modal-caixa" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+            <button type="button" id="modal-fechar" class="modal-fechar" aria-label="Fechar">×</button>
+            <h3 id="modal-titulo">Detalhes da Turma e Presenças</h3>
+            <div id="modal-conteudo">
+                <!-- Tabela interna de alunos inscritos para este treino -->
+                <table id="tableareaprofessor" style="margin-top: 10px;">
+                    <thead>
+                        <tr>
+                            <th>Aluno</th>
+                            <th>Matrícula</th>
+                            <th>Presença (Check-in)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabelaAlunosInscritos">
+                        <!-- Preenchido via script ao clicar no treino -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts essenciais -->
+    <script type="module" src="../../js/script.js"></script>
+    <script type="module" src="../menu_usuario.js"></script>
+    <script type="module" src="../../js/pesquisar.js"></script>
+</body>
 </html>
