@@ -1,13 +1,14 @@
 <html>
 <head>
+</script>
+
+
     <title>Basquete</title>
     <link rel="stylesheet" href="../../css/global.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-    <script src="script.js"></script>
 
     <header>
         <div class="header-marca">
@@ -24,8 +25,10 @@
 
         <aside class="menu-lateral" id='mudar_cor'>
             <div class="perfil">
-                <img src="../../imagens/usuario.jpg" alt="Usuário" width="50">
-                <span>Arthur</span>
+                <img src="../../img/user-icon.png" alt="Usuário" width="50">
+                <span id="nomeUsuario">
+                    Carregando...
+                </span>
             </div>
 
             <nav>
@@ -67,11 +70,12 @@
                     <button class="botaockein" onclick="mostrarMensagem()">CHECK-IN</button>
                 </div>
 
-                <img src="https://jumperbrasil.com.br/wp-content/uploads/2023/09/Anthony-Edwards-Dillon-Brooks.jpg" width="500" alt="Basquete" id="imagem-atletismo">
+                <img src="https://s1.static.brasilescola.uol.com.br/be/2024/04/salto-com-vara-atletismo.JPG" width="500" alt="Atletismo" id="imagem-atletismo">
 
-            
         </section>
     </main>
 
+    
+    <script type="module" src="../menu_usuario.js"></script>
 </body>
 </html>
