@@ -16,19 +16,23 @@
             <div class="menu-login">
                     <div class="login-box">
                         <p><img src="img/user-icon.png" width="150"></p>
-                        <p class="subtitle">Utilize seu login do suap.</p>
+                        <p class="subtitle">Acesse com sua matrícula e senha.</p>
 
-                        <form>
+                        <form>  
                             <div class="form-group">
-                                <p for="usuario">Usuário</p>
-                                <input type="text" id="usuario" value="">
+                                <p for="usuario">Matrícula</p>
+                                <input type="text" id="usuario" required>
                             </div>
 
                             <div class="form-group">
-                                <p for="senha">Senha</p>
-                                <input type="password" id="senha" value="">
-                            </div>
+                                <label for="senha">Senha</label>
 
+                                <div class="campo-senha">
+                                    <input type="password" id="senha" required>
+
+                                    <button type="button" id="mostrarSenha" class="btn-login btn-mostrar">Mostrar</button>
+                                </div>
+                            </div>
                             <button type="submit" class="btn-login">Login</button>
                         </form>
 

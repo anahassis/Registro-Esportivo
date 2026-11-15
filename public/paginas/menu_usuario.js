@@ -38,12 +38,10 @@ document.addEventListener("DOMContentLoaded", async () => {
                 });
             }
 
-            // Define o nome na interface[cite: 2]
-            if (dadosUsuario && dadosUsuario.nome) {
-                spanNome.textContent = dadosUsuario.nome;
-            } else {
-                spanNome.textContent = usuarioLogado;
-            }
+            // Define o nome usando os dados salvos durante o login
+            const nomeSalvo = localStorage.getItem("nomeUsuario");
+
+            spanNome.textContent = nomeSalvo || "Aluno";
 
             // Se for aluno (nível 0), carrega e exibe as inscrições[cite: 2]
             if (nivelAcesso !== "1") {
@@ -74,9 +72,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
 
         } catch (erro) {
-            console.error("Erro ao carregar dados do usuário ou inscrições:", erro);
-            spanNome.textContent = usuarioLogado;
-        } 
+    console.error("Erro ao carregar dados do usuário ou inscrições:", erro);
+        }   
     } else if (spanNome) {
         spanNome.textContent = "Visitante";
     }
