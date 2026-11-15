@@ -1,0 +1,10 @@
+# Teto: Esse arquivo é para proteger algumas informações e evitar que elas sejam enviadas ao github
+# Dependências
+node_modules/
+
+# Credenciais privadas do Firebase
+server/keyfirebase_admin.json
+server/senhas_iniciais.csv
+
+# Dados pessoais dos alunos
+server/alunos.txt
